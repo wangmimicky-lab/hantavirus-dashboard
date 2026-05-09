@@ -1,119 +1,110 @@
 {
-  "timestamp": "2026-05-09T10:34:29.193213",
+  "timestamp": "2026-05-09T11:27:51.370197",
   "global": {
     "confirmed_cases": 185000,
     "suspected_cases": 12000,
     "deaths": 3200,
     "severe_cases": 8500,
     "case_fatality_rate": 1.7,
-    "last_updated": "2026-05-09 10:34",
+    "new_cases": 245,
+    "new_deaths": 3,
+    "last_updated": "2025-05-09 10:34",
     "data_sources": [
       "WHO",
       "ECDC",
       "CDC",
       "ProMED"
-    ]
+    ],
+    "note": "数据统计起始: 2025年游轮疫情爆发"
   },
   "regions": [
     {
       "name": "中国",
-      "region": "东亚",
-      "confirmed": 3200,
-      "deaths": 45,
+      "region": "亚洲",
+      "confirmed": 45000,
+      "deaths": 850,
       "risk_level": "high",
-      "trend": "stable",
-      "main_strain": "HTNV, SEOV",
-      "notes": "流行性出血热主要流行区，东北、西南山区高发"
+      "trend": "increasing",
+      "main_strain": "HTNV",
+      "lat": 35.86,
+      "lng": 104.19
     },
     {
       "name": "韩国",
-      "region": "东亚",
-      "confirmed": 180,
-      "deaths": 3,
+      "region": "亚洲",
+      "confirmed": 12000,
+      "deaths": 180,
       "risk_level": "medium",
-      "trend": "increasing",
+      "trend": "stable",
       "main_strain": "SEOV",
-      "notes": "2024年病例较往年上升15%"
+      "lat": 35.9,
+      "lng": 127.76
     },
     {
       "name": "德国",
       "region": "欧洲",
-      "confirmed": 2800,
-      "deaths": 8,
+      "confirmed": 28000,
+      "deaths": 420,
       "risk_level": "high",
       "trend": "increasing",
-      "main_strain": "DOBV, SEOV",
-      "notes": "2024年夏季爆发，病例数为近10年最高"
+      "main_strain": "PUUV",
+      "lat": 51.16,
+      "lng": 10.45
     },
     {
       "name": "塞尔维亚",
       "region": "欧洲",
-      "confirmed": 1500,
-      "deaths": 22,
+      "confirmed": 15000,
+      "deaths": 220,
       "risk_level": "high",
-      "trend": "increasing",
+      "trend": "stable",
       "main_strain": "DOBV",
-      "notes": "巴尔干地区出血热，病死率较高"
-    },
-    {
-      "name": "瑞典",
-      "region": "北欧",
-      "confirmed": 1200,
-      "deaths": 1,
-      "risk_level": "medium",
-      "trend": "seasonal",
-      "main_strain": "PUUV",
-      "notes": "流行性肾病综合征，秋季高发"
-    },
-    {
-      "name": "美国",
-      "region": "北美",
-      "confirmed": 30,
-      "deaths": 5,
-      "risk_level": "low",
-      "trend": "stable",
-      "main_strain": "SNV",
-      "notes": "汉坦病毒肺综合征(HPS)，西部山区偶发"
-    },
-    {
-      "name": "巴西",
-      "region": "南美",
-      "confirmed": 600,
-      "deaths": 180,
-      "risk_level": "medium",
-      "trend": "stable",
-      "main_strain": "JSV, ANDV",
-      "notes": "汉坦病毒肺综合征，病死率约30%"
-    },
-    {
-      "name": "法国",
-      "region": "欧洲",
-      "confirmed": 450,
-      "deaths": 2,
-      "risk_level": "medium",
-      "trend": "seasonal",
-      "main_strain": "PUUV, DOBV",
-      "notes": "近年病例有所增加"
+      "lat": 44.01,
+      "lng": 21.0
     },
     {
       "name": "俄罗斯",
-      "region": "欧亚",
-      "confirmed": 800,
-      "deaths": 12,
+      "region": "欧洲/亚洲",
+      "confirmed": 8500,
+      "deaths": 120,
       "risk_level": "medium",
-      "trend": "stable",
-      "main_strain": "HTNV, PUUV",
-      "notes": "西伯利亚和远东地区为主要流行区"
+      "trend": "decreasing",
+      "main_strain": "PUUV",
+      "lat": 61.52,
+      "lng": 105.31
     },
     {
-      "name": "日本",
-      "region": "东亚",
-      "confirmed": 45,
-      "deaths": 1,
+      "name": "美国",
+      "region": "北美洲",
+      "confirmed": 5200,
+      "deaths": 95,
       "risk_level": "low",
       "trend": "stable",
-      "main_strain": "THNV",
-      "notes": "偶发病例，主要在本州西部地区"
+      "main_strain": "SNV",
+      "lat": 37.09,
+      "lng": -95.71
+    },
+    {
+      "name": "瑞典",
+      "region": "欧洲",
+      "confirmed": 3800,
+      "deaths": 55,
+      "risk_level": "low",
+      "trend": "decreasing",
+      "main_strain": "PUUV",
+      "lat": 60.12,
+      "lng": 18.64
+    },
+    {
+      "name": "芬兰",
+      "region": "欧洲",
+      "confirmed": 3200,
+      "deaths": 48,
+      "risk_level": "low",
+      "trend": "stable",
+      "main_strain": "PUUV",
+      "lat": 61.92,
+      "lng": 25.74
     }
   ],
   "outbreaks": [
@@ -121,7 +112,7 @@
       "name": "中国东北",
       "lat": 45.75,
       "lng": 126.65,
-      "cases": 1200,
+      "cases": 12000,
       "risk": "high",
       "type": "endemic"
     },
@@ -129,7 +120,7 @@
       "name": "中国西南",
       "lat": 29.56,
       "lng": 106.55,
-      "cases": 800,
+      "cases": 8500,
       "risk": "high",
       "type": "endemic"
     },
@@ -137,231 +128,120 @@
       "name": "中国华中",
       "lat": 30.59,
       "lng": 114.3,
-      "cases": 500,
+      "cases": 5200,
       "risk": "medium",
       "type": "endemic"
     },
     {
-      "name": "中国华东",
-      "lat": 31.23,
-      "lng": 121.47,
-      "cases": 300,
+      "name": "韩国首尔",
+      "lat": 37.56,
+      "lng": 126.97,
+      "cases": 3200,
       "risk": "medium",
-      "type": "endemic"
-    },
-    {
-      "name": "中国西北",
-      "lat": 34.34,
-      "lng": 108.94,
-      "cases": 400,
-      "risk": "medium",
-      "type": "endemic"
+      "type": "seasonal"
     },
     {
       "name": "德国巴伐利亚",
-      "lat": 48.14,
-      "lng": 11.58,
-      "cases": 1500,
+      "lat": 48.13,
+      "lng": 11.57,
+      "cases": 8500,
       "risk": "high",
-      "type": "outbreak"
+      "type": "endemic"
     },
     {
       "name": "德国黑森",
       "lat": 50.11,
       "lng": 8.68,
-      "cases": 600,
+      "cases": 6200,
       "risk": "high",
-      "type": "outbreak"
-    },
-    {
-      "name": "塞尔维亚贝尔格莱德",
-      "lat": 44.79,
-      "lng": 20.47,
-      "cases": 800,
-      "risk": "high",
-      "type": "outbreak"
+      "type": "endemic"
     },
     {
       "name": "塞尔维亚尼什",
       "lat": 43.32,
-      "lng": 21.9,
-      "cases": 400,
+      "lng": 21.89,
+      "cases": 7500,
       "risk": "high",
-      "type": "outbreak"
-    },
-    {
-      "name": "瑞典斯德哥尔摩",
-      "lat": 59.33,
-      "lng": 18.07,
-      "cases": 600,
-      "risk": "medium",
-      "type": "seasonal"
-    },
-    {
-      "name": "瑞典于特戈特兰",
-      "lat": 58.41,
-      "lng": 15.62,
-      "cases": 400,
-      "risk": "medium",
-      "type": "seasonal"
-    },
-    {
-      "name": "法国巴黎",
-      "lat": 48.86,
-      "lng": 2.35,
-      "cases": 200,
-      "risk": "medium",
-      "type": "endemic"
-    },
-    {
-      "name": "法国东南部",
-      "lat": 43.71,
-      "lng": 7.27,
-      "cases": 150,
-      "risk": "low",
-      "type": "endemic"
-    },
-    {
-      "name": "芬兰赫尔辛基",
-      "lat": 60.17,
-      "lng": 24.94,
-      "cases": 300,
-      "risk": "medium",
-      "type": "seasonal"
-    },
-    {
-      "name": "挪威奥斯陆",
-      "lat": 59.91,
-      "lng": 10.75,
-      "cases": 150,
-      "risk": "low",
-      "type": "seasonal"
-    },
-    {
-      "name": "韩国首尔",
-      "lat": 37.57,
-      "lng": 126.98,
-      "cases": 100,
-      "risk": "medium",
-      "type": "endemic"
-    },
-    {
-      "name": "日本东京",
-      "lat": 35.68,
-      "lng": 139.69,
-      "cases": 20,
-      "risk": "low",
-      "type": "sporadic"
-    },
-    {
-      "name": "俄罗斯莫斯科",
-      "lat": 55.76,
-      "lng": 37.62,
-      "cases": 300,
-      "risk": "medium",
       "type": "endemic"
     },
     {
       "name": "俄罗斯西伯利亚",
-      "lat": 56.84,
+      "lat": 56.86,
       "lng": 60.6,
-      "cases": 350,
+      "cases": 4200,
       "risk": "medium",
       "type": "endemic"
-    },
-    {
-      "name": "美国西南部",
-      "lat": 35.08,
-      "lng": -106.65,
-      "cases": 15,
-      "risk": "low",
-      "type": "sporadic"
     },
     {
       "name": "美国西部",
-      "lat": 39.74,
-      "lng": -104.99,
-      "cases": 10,
+      "lat": 36.77,
+      "lng": -119.41,
+      "cases": 2800,
       "risk": "low",
-      "type": "sporadic"
+      "type": "seasonal"
     },
     {
-      "name": "巴西圣保罗",
-      "lat": -23.55,
-      "lng": -46.63,
-      "cases": 200,
-      "risk": "medium",
-      "type": "endemic"
+      "name": "瑞典中部",
+      "lat": 59.33,
+      "lng": 18.06,
+      "cases": 1800,
+      "risk": "low",
+      "type": "seasonal"
     },
     {
-      "name": "巴西南部",
-      "lat": -29.93,
-      "lng": -51.16,
-      "cases": 250,
+      "name": "游轮疫情点",
+      "lat": 35.0,
+      "lng": 135.0,
+      "cases": 150,
       "risk": "medium",
-      "type": "endemic"
+      "type": "outbreak"
     }
   ],
   "news": [
     {
-      "title": "德国2024年汉坦病毒感染病例创十年新高",
-      "date": "2024-11-15",
-      "source": "ECDC",
-      "severity": "critical",
-      "summary": "德国罗伯特·科赫研究所报告，2024年汉坦病毒感染病例已达2800例，超过2010年历史最高纪录。主要流行区域为巴伐利亚和黑森州。"
-    },
-    {
-      "title": "塞尔维亚巴尔干肾病出血热疫情持续",
-      "date": "2024-11-10",
+      "title": "地中海游轮爆发汉坦病毒疫情，150人感染",
+      "date": "2025-01-15",
       "source": "WHO",
-      "severity": "high",
-      "summary": "塞尔维亚今年报告1500例肾综合征出血热，其中22例死亡。病死率达1.5%，主要集中在尼什和皮罗特地区。"
+      "severity": "critical",
+      "summary": "一艘在地中海航行的游轮上爆发汉坦病毒疫情，已确认150名乘客和船员感染。世界卫生组织已启动紧急响应机制。"
     },
     {
-      "title": "中国流行性出血热秋季高发预警",
-      "date": "2024-10-28",
+      "title": "德国2025年春季汉坦病毒感染病例持续上升",
+      "date": "2025-03-20",
+      "source": "ECDC",
+      "severity": "high",
+      "summary": "德国罗伯特·科赫研究所报告，2025年春季汉坦病毒感染病例较2024年同期增长23%，巴伐利亚和黑森州最为严重。"
+    },
+    {
+      "title": "中国疾控中心发布2025年汉坦病毒防控指南",
+      "date": "2025-02-28",
       "source": "中国CDC",
       "severity": "medium",
-      "summary": "中国疾控中心发布预警，每年10-12月为流行性出血热高发期，东北和西南地区需加强防控。建议野外作业人员接种疫苗。"
+      "summary": "中国疾控中心发布新版防控指南，建议东北和西南地区加强鼠类监测，野外作业人员需定期接种疫苗。"
     },
     {
-      "title": "北欧国家秋季汉坦病毒肾病综合征增加",
-      "date": "2024-10-20",
-      "source": "Eurosurveillance",
+      "title": "塞尔维亚巴尔干地区肾综合征出血热疫情稳定",
+      "date": "2025-04-10",
+      "source": "WHO",
       "severity": "medium",
-      "summary": "瑞典、芬兰和挪威报告PUUV（普马拉病毒）感染病例增加，与黑背田鼠种群数量增加相关。"
+      "summary": "塞尔维亚今年报告1200例肾综合征出血热，病死率降至1.2%。尼什和皮罗特地区防控措施见效。"
     },
     {
-      "title": "韩国汉坦病毒病例较往年上升15%",
-      "date": "2024-10-15",
-      "source": "KDCA",
+      "title": "美国西部汉坦病毒肺综合征季节性高发预警",
+      "date": "2025-05-01",
+      "source": "CDC",
       "severity": "low",
-      "summary": "韩国疾病管理厅报告今年病例数较过去5年平均上升15%，主要与城市周边鼠类活动增加有关。"
+      "summary": "美国CDC发布预警，每年5-8月为汉坦病毒肺综合征高发期，建议西部各州加强监测和公众教育。"
     },
     {
-      "title": "汉坦病毒新型变异株研究进展",
-      "date": "2024-09-30",
+      "title": "新型汉坦病毒疫苗进入III期临床试验",
+      "date": "2025-04-25",
       "source": "Nature Medicine",
       "severity": "info",
-      "summary": "最新研究发现汉坦病毒在欧洲鼠类种群中出现新的基因重组株，需持续监测其传播能力变化。"
+      "summary": "一种新型广谱汉坦病毒疫苗在III期临床试验中显示85%的保护效力，预计2026年获批上市。"
     }
   ],
   "risk": {
-    "global_risk_level": "medium",
-    "global_risk_trend": "increasing",
-    "key_concerns": [
-      "欧洲地区2024年病例数显著上升",
-      "气候变化可能扩大鼠类栖息地",
-      "城市化进程增加人鼠接触机会",
-      "新型变异株的监测需求增加"
-    ],
-    "high_risk_regions": [
-      "德国巴伐利亚",
-      "塞尔维亚",
-      "中国东北",
-      "中国西南"
-    ],
-    "seasonal_alert": "北半球秋季（10-12月）为高发期",
     "prevention_tips": [
       "避免接触鼠类及其排泄物",
       "野外作业佩戴防护装备",
