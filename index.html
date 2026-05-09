@@ -281,12 +281,20 @@
             grid-column: 2;
             grid-row: 2 / 4;
             position: relative;
+            overflow: hidden;
         }
 
         #map {
             width: 100%;
             height: 100%;
             border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* 防止地图缩放时出现空白 */
+        .leaflet-container {
+            overflow: hidden !important;
+            touch-action: manipulation;
         }
 
         .map-overlay {
@@ -746,16 +754,12 @@
             <div class="map-overlay">
                 <div class="map-legend">
                     <div class="legend-item">
-                        <div class="legend-dot high"></div>
-                        <span>高风险</span>
+                        <div class="legend-dot high" style="background: #3b82f6; box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);"></div>
+                        <span>病例位置</span>
                     </div>
                     <div class="legend-item">
-                        <div class="legend-dot medium"></div>
-                        <span>中风险</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-dot low"></div>
-                        <span>低风险</span>
+                        <div class="legend-dot medium" style="background: #f97316; box-shadow: 0 0 8px rgba(249, 115, 22, 0.5);"></div>
+                        <span>邮轮疫情点</span>
                     </div>
                 </div>
             </div>
@@ -897,8 +901,8 @@
             markers = [];
 
             locations.forEach(loc => {
-                const color = loc.risk === 'high' ? '#ef4444' : 
-                             loc.risk === 'medium' ? '#f97316' : '#10b981';
+                // 邮轮用橙色，其他用蓝色
+                const color = loc.name.includes('邮轮') ? '#f97316' : '#3b82f6';
                 const size = loc.name.includes('邮轮') ? 18 : Math.max(8, loc.cases * 2);
 
                 const marker = L.circleMarker([loc.lat, loc.lng], {
@@ -915,9 +919,6 @@
                         <h3 style="margin: 0 0 8px 0; font-size: 14px;">${loc.name}</h3>
                         <div style="font-size: 12px; color: #64748b; margin-bottom: 4px;">
                             病例: <b style="color: #f8fafc;">${loc.cases}</b>
-                        </div>
-                        <div style="font-size: 12px; color: #64748b; margin-bottom: 4px;">
-                            风险等级: <b style="color: ${color};">${loc.risk === 'high' ? '高' : loc.risk === 'medium' ? '中' : '低'}</b>
                         </div>
                         <div style="font-size: 12px; color: #64748b;">
                             类型: ${loc.type === 'outbreak' ? '疫情爆发' : '地方性流行'}
