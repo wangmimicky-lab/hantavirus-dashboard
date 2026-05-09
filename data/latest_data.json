@@ -1,244 +1,159 @@
 {
-  "timestamp": "2026-05-09T11:37:01.800747",
+  "timestamp": "2026-05-09T11:50:43.355525",
   "global": {
-    "confirmed_cases": 185000,
-    "suspected_cases": 12000,
-    "deaths": 3200,
-    "severe_cases": 8500,
-    "case_fatality_rate": 1.7,
-    "new_cases": 245,
-    "new_deaths": 3,
-    "last_updated": "2026-05-09 10:34",
+    "confirmed_cases": 8,
+    "suspected_cases": 2,
+    "deaths": 3,
+    "severe_cases": 3,
+    "case_fatality_rate": 38,
+    "new_cases": 0,
+    "new_deaths": 0,
+    "last_updated": "2026-05-08 23:59",
     "data_sources": [
       "WHO",
-      "ECDC",
       "CDC",
-      "ProMED"
+      "ECDC"
     ],
-    "note": "数据统计起始: 2026年5月初游轮疫情爆发"
+    "note": "数据统计起始: 2026年5月大西洋号邮轮疫情",
+    "virus_strain": "安第斯病毒 (Andes virus, ANDV)",
+    "transmission": "人传人（罕见）",
+    "who_risk_level": "全球人口: 低 | 邮轮人员: 中",
+    "cdc_level": "Level 3 紧急响应"
   },
   "regions": [
     {
-      "name": "中国",
-      "region": "亚洲",
-      "confirmed": 45000,
-      "deaths": 850,
+      "name": "南非",
+      "region": "非洲",
+      "confirmed": 2,
+      "deaths": 1,
       "risk_level": "high",
-      "trend": "increasing",
-      "main_strain": "HTNV",
-      "lat": 35.86,
-      "lng": 104.19
+      "trend": "stable",
+      "main_strain": "ANDV",
+      "lat": -33.92,
+      "lng": 18.42,
+      "detail": "1名重症患者ICU治疗中"
     },
     {
-      "name": "韩国",
-      "region": "亚洲",
-      "confirmed": 12000,
-      "deaths": 180,
+      "name": "荷兰",
+      "region": "欧洲",
+      "confirmed": 2,
+      "deaths": 1,
       "risk_level": "medium",
       "trend": "stable",
-      "main_strain": "SEOV",
-      "lat": 35.9,
-      "lng": 127.76
+      "main_strain": "ANDV",
+      "lat": 52.36,
+      "lng": 4.89,
+      "detail": "2名船员5月6-7日紧急撤离治疗"
     },
     {
-      "name": "德国",
+      "name": "瑞士",
       "region": "欧洲",
-      "confirmed": 28000,
-      "deaths": 420,
-      "risk_level": "high",
-      "trend": "increasing",
-      "main_strain": "PUUV",
-      "lat": 51.16,
-      "lng": 10.45
-    },
-    {
-      "name": "塞尔维亚",
-      "region": "欧洲",
-      "confirmed": 15000,
-      "deaths": 220,
-      "risk_level": "high",
-      "trend": "stable",
-      "main_strain": "DOBV",
-      "lat": 44.01,
-      "lng": 21.0
-    },
-    {
-      "name": "俄罗斯",
-      "region": "欧洲/亚洲",
-      "confirmed": 8500,
-      "deaths": 120,
+      "confirmed": 2,
+      "deaths": 1,
       "risk_level": "medium",
-      "trend": "decreasing",
-      "main_strain": "PUUV",
-      "lat": 61.52,
-      "lng": 105.31
+      "trend": "stable",
+      "main_strain": "ANDV",
+      "lat": 46.94,
+      "lng": 7.44,
+      "detail": "乘客回国后确诊"
     },
     {
-      "name": "美国",
-      "region": "北美洲",
-      "confirmed": 5200,
-      "deaths": 95,
+      "name": "英国",
+      "region": "欧洲",
+      "confirmed": 2,
+      "deaths": 0,
       "risk_level": "low",
       "trend": "stable",
-      "main_strain": "SNV",
-      "lat": 37.09,
-      "lng": -95.71
-    },
-    {
-      "name": "瑞典",
-      "region": "欧洲",
-      "confirmed": 3800,
-      "deaths": 55,
-      "risk_level": "low",
-      "trend": "decreasing",
-      "main_strain": "PUUV",
-      "lat": 60.12,
-      "lng": 18.64
-    },
-    {
-      "name": "芬兰",
-      "region": "欧洲",
-      "confirmed": 3200,
-      "deaths": 48,
-      "risk_level": "low",
-      "trend": "stable",
-      "main_strain": "PUUV",
-      "lat": 61.92,
-      "lng": 25.74
+      "main_strain": "ANDV",
+      "lat": 51.5,
+      "lng": -0.12,
+      "detail": "接触者追踪中"
     }
   ],
   "outbreaks": [
     {
-      "name": "中国东北",
-      "lat": 45.75,
-      "lng": 126.65,
-      "cases": 12000,
+      "name": "大西洋号邮轮 (MV Hondius)",
+      "lat": -25.0,
+      "lng": -15.0,
+      "cases": 8,
       "risk": "high",
-      "type": "endemic"
+      "type": "outbreak"
     },
     {
-      "name": "中国西南",
-      "lat": 29.56,
-      "lng": 106.55,
-      "cases": 8500,
+      "name": "南非开普敦",
+      "lat": -33.92,
+      "lng": 18.42,
+      "cases": 2,
       "risk": "high",
-      "type": "endemic"
+      "type": "outbreak"
     },
     {
-      "name": "中国华中",
-      "lat": 30.59,
-      "lng": 114.3,
-      "cases": 5200,
+      "name": "荷兰阿姆斯特丹",
+      "lat": 52.36,
+      "lng": 4.89,
+      "cases": 2,
       "risk": "medium",
-      "type": "endemic"
+      "type": "outbreak"
     },
     {
-      "name": "韩国首尔",
-      "lat": 37.56,
-      "lng": 126.97,
-      "cases": 3200,
+      "name": "瑞士苏黎世",
+      "lat": 46.94,
+      "lng": 7.44,
+      "cases": 2,
       "risk": "medium",
-      "type": "seasonal"
+      "type": "outbreak"
     },
     {
-      "name": "德国巴伐利亚",
-      "lat": 48.13,
-      "lng": 11.57,
-      "cases": 8500,
-      "risk": "high",
-      "type": "endemic"
-    },
-    {
-      "name": "德国黑森",
-      "lat": 50.11,
-      "lng": 8.68,
-      "cases": 6200,
-      "risk": "high",
-      "type": "endemic"
-    },
-    {
-      "name": "塞尔维亚尼什",
-      "lat": 43.32,
-      "lng": 21.89,
-      "cases": 7500,
-      "risk": "high",
-      "type": "endemic"
-    },
-    {
-      "name": "俄罗斯西伯利亚",
-      "lat": 56.86,
-      "lng": 60.6,
-      "cases": 4200,
-      "risk": "medium",
-      "type": "endemic"
-    },
-    {
-      "name": "美国西部",
-      "lat": 36.77,
-      "lng": -119.41,
-      "cases": 2800,
+      "name": "英国伦敦",
+      "lat": 51.5,
+      "lng": -0.12,
+      "cases": 2,
       "risk": "low",
-      "type": "seasonal"
-    },
-    {
-      "name": "瑞典中部",
-      "lat": 59.33,
-      "lng": 18.06,
-      "cases": 1800,
-      "risk": "low",
-      "type": "seasonal"
-    },
-    {
-      "name": "游轮疫情点",
-      "lat": 35.0,
-      "lng": 135.0,
-      "cases": 150,
-      "risk": "medium",
       "type": "outbreak"
     }
   ],
   "news": [
     {
-      "title": "地中海游轮爆发汉坦病毒疫情，150人感染",
-      "date": "2026-05-01",
-      "source": "WHO",
-      "severity": "critical",
-      "summary": "一艘在地中海航行的游轮上爆发汉坦病毒疫情，已确认150名乘客和船员感染。世界卫生组织已启动紧急响应机制。"
-    },
-    {
-      "title": "游轮疫情持续发酵，多国报告输入性病例",
-      "date": "2026-05-05",
-      "source": "ECDC",
-      "severity": "critical",
-      "summary": "游轮疫情已导致意大利、西班牙、希腊报告输入性病例。WHO呼吁各国加强港口检疫和旅客健康监测。"
-    },
-    {
-      "title": "德国汉坦病毒感染病例创十年新高",
-      "date": "2026-05-03",
-      "source": "WHO",
-      "severity": "high",
-      "summary": "德国罗伯特·科赫研究所报告，2026年春季汉坦病毒感染病例较2025年同期增长35%，巴伐利亚和黑森州最为严重。"
-    },
-    {
-      "title": "中国疾控中心发布2026年汉坦病毒防控指南",
-      "date": "2026-05-04",
-      "source": "中国CDC",
-      "severity": "medium",
-      "summary": "中国疾控中心发布新版防控指南，建议东北和西南地区加强鼠类监测，野外作业人员需定期接种疫苗。"
-    },
-    {
-      "title": "塞尔维亚巴尔干地区肾综合征出血热疫情稳定",
-      "date": "2026-05-06",
-      "source": "WHO",
-      "severity": "medium",
-      "summary": "塞尔维亚今年报告1200例肾综合征出血热，病死率降至1.2%。尼什和皮罗特地区防控措施见效。"
-    },
-    {
-      "title": "新型汉坦病毒疫苗进入III期临床试验",
+      "title": "WHO确认大西洋号邮轮汉坦病毒疫情：8例确诊，3例死亡",
       "date": "2026-05-08",
+      "source": "WHO",
+      "severity": "critical",
+      "summary": "世界卫生组织发布最新通报，确认大西洋号邮轮集群感染事件共报告8例病例（6例确诊+2例疑似），其中3例死亡。确诊病毒株为安第斯病毒(ANDV)，具备人传人潜力。病死率约38%。"
+    },
+    {
+      "title": "2名船员紧急撤离至荷兰接受治疗",
+      "date": "2026-05-07",
+      "source": "ECDC",
+      "severity": "high",
+      "summary": "大西洋号邮轮上2名感染汉坦病毒的船员于5月6日至7日被紧急撤离，空运至荷兰接受治疗，目前情况稳定。此前已有1名患者留在南非ICU治疗。"
+    },
+    {
+      "title": "CDC将疫情列为3级紧急响应，关注人际传播风险",
+      "date": "2026-05-06",
+      "source": "CDC",
+      "severity": "high",
+      "summary": "美国CDC将该疫情列为Level 3紧急响应。WHO初步调查怀疑存在罕见的人际传播，特别是在共用客舱的亲密接触者（如夫妻）之间。"
+    },
+    {
+      "title": "大西洋号4月航行期间爆发疫情，147人受影响",
+      "date": "2026-05-05",
+      "source": "WHO",
+      "severity": "critical",
+      "summary": "大西洋号(MV Hondius)邮轮于2026年4月在大西洋航行期间爆发汉坦病毒疫情，涉及147名乘客与船员。病例已分散至南非、荷兰、瑞士和英国进行诊治。"
+    },
+    {
+      "title": "WHO评估全球人口风险为低，持续追踪接触者",
+      "date": "2026-05-04",
+      "source": "WHO",
+      "severity": "medium",
+      "summary": "WHO评估该事件对全球人口风险为低，但对邮轮上人员风险为中等。各国正在对147名乘客和船员进行接触者追踪和健康监测。"
+    },
+    {
+      "title": "安第斯病毒(ANDV)：少数具备人传人能力的汉坦病毒变种",
+      "date": "2026-05-03",
       "source": "Nature Medicine",
       "severity": "info",
-      "summary": "一种新型广谱汉坦病毒疫苗在III期临床试验中显示85%的保护效力，预计2026年底获批上市。"
+      "summary": "安第斯病毒是南美洲流行的汉坦病毒株，引起汉坦病毒肺综合征(HPS)，致死率通常高达38%-50%。本次疫情是少数确认可能存在人际传播的汉坦病毒感染事件。"
     }
   ],
   "risk": {
@@ -249,5 +164,20 @@
       "高发地区考虑接种疫苗",
       "出现发热症状及时就医"
     ]
+  },
+  "cruise_ship": {
+    "name": "大西洋号 (MV Hondius)",
+    "total_people": 147,
+    "sail_date": "2026-04",
+    "route": "大西洋",
+    "confirmed": 6,
+    "suspected": 2,
+    "deaths": 3,
+    "icu": 1,
+    "evacuated": 2,
+    "evacuation_date": "2026-05-06至05-07",
+    "transmission": "人际传播（罕见，共用客舱亲密接触者）",
+    "virus": "安第斯病毒 (Andes virus, ANDV)",
+    "cdc_level": "Level 3 紧急响应"
   }
 }

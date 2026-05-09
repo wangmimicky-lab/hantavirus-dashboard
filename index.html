@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>汉坦病毒全球爆发实时看板</title>
+    <title>汉坦病毒疫情实时看板 — 大西洋号邮轮事件</title>
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
@@ -43,6 +43,7 @@
         }
         .nav-logo svg { width: 20px; height: 20px; }
         .nav-title { font-size: 16px; font-weight: 600; color: #f8fafc; }
+        .nav-subtitle { font-size: 11px; color: #64748b; margin-left: 8px; }
         .nav-right { display: flex; align-items: center; gap: 16px; }
         .nav-status {
             display: flex; align-items: center; gap: 6px;
@@ -50,7 +51,7 @@
         }
         .status-dot {
             width: 8px; height: 8px;
-            background: #10b981;
+            background: #ef4444;
             border-radius: 50%;
             animation: pulse 2s infinite;
         }
@@ -61,8 +62,8 @@
         .nav-update {
             font-size: 12px; color: #64748b;
             padding: 4px 10px;
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.2);
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
             border-radius: 4px;
         }
 
@@ -73,7 +74,7 @@
             padding: 20px;
             display: grid;
             grid-template-columns: 320px 1fr 320px;
-            grid-template-rows: auto 1fr auto;
+            grid-template-rows: auto auto 1fr auto;
             gap: 16px;
             height: calc(100vh - 56px);
         }
@@ -116,11 +117,47 @@
         .badge-orange { background: rgba(249, 115, 22, 0.2); color: #f97316; }
         .badge-blue { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
         .badge-green { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+        .badge-purple { background: rgba(139, 92, 246, 0.2); color: #8b5cf6; }
+
+        /* ─── 邮轮疫情卡片 ─────────────────────────────────────── */
+        .cruise-card {
+            grid-column: 1 / 4;
+            grid-row: 1;
+        }
+
+        .cruise-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+        }
+
+        .cruise-detail {
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 8px;
+            padding: 12px;
+            border-left: 3px solid #f97316;
+        }
+
+        .cruise-detail-label {
+            font-size: 11px;
+            color: #64748b;
+            margin-bottom: 4px;
+        }
+
+        .cruise-detail-value {
+            font-size: 14px;
+            font-weight: 600;
+            color: #f8fafc;
+        }
+
+        .cruise-detail-value.highlight {
+            color: #f97316;
+        }
 
         /* ─── 全球统计 ─────────────────────────────────────── */
         .global-stats {
             grid-column: 1;
-            grid-row: 1;
+            grid-row: 2;
         }
 
         .stat-grid {
@@ -139,7 +176,7 @@
         }
 
         .stat-value {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 700;
             color: #f8fafc;
             font-variant-numeric: tabular-nums;
@@ -149,6 +186,7 @@
         .stat-value.blue { color: #3b82f6; }
         .stat-value.green { color: #10b981; }
         .stat-value.cyan { color: #06b6d4; }
+        .stat-value.purple { color: #8b5cf6; }
 
         .stat-label {
             font-size: 11px;
@@ -156,24 +194,21 @@
             margin-top: 4px;
         }
 
-        .stat-trend {
-            font-size: 11px;
-            margin-top: 4px;
-        }
-        .trend-up { color: #ef4444; }
-        .trend-down { color: #10b981; }
-        .trend-stable { color: #64748b; }
-
-        .stat-new {
+        .stat-note {
             font-size: 10px;
             color: #64748b;
             margin-top: 2px;
         }
 
+        .stat-highlight {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
         /* ─── 各国数据列表 ─────────────────────────────────────── */
         .country-list {
             grid-column: 1;
-            grid-row: 2;
+            grid-row: 3;
             overflow-y: auto;
         }
 
@@ -210,6 +245,12 @@
             color: #64748b;
             margin-top: 2px;
         }
+        .country-detail {
+            font-size: 10px;
+            color: #94a3b8;
+            margin-top: 4px;
+            font-style: italic;
+        }
 
         .country-stats {
             text-align: right;
@@ -225,15 +266,10 @@
             color: #ef4444;
         }
 
-        .country-trend {
-            font-size: 10px;
-            margin-top: 2px;
-        }
-
         /* ─── 地图区域 ─────────────────────────────────────── */
         .map-container {
             grid-column: 2;
-            grid-row: 1 / 3;
+            grid-row: 2 / 4;
             position: relative;
         }
 
@@ -281,7 +317,7 @@
         /* ─── 新闻区域 ─────────────────────────────────────── */
         .news-panel {
             grid-column: 3;
-            grid-row: 1 / 3;
+            grid-row: 2 / 4;
             overflow-y: auto;
         }
 
@@ -342,7 +378,7 @@
         /* ─── 底部预防 ─────────────────────────────────────── */
         .bottom-panel {
             grid-column: 1 / 4;
-            grid-row: 3;
+            grid-row: 4;
         }
 
         .prevention-grid {
@@ -421,6 +457,16 @@
             border-top: 1px solid rgba(59, 130, 246, 0.1);
         }
 
+        .risk-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .risk-low-badge { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+        .risk-medium-badge { background: rgba(249, 115, 22, 0.2); color: #f97316; }
+
         /* ─── 滚动条 ─────────────────────────────────────── */
         ::-webkit-scrollbar {
             width: 6px;
@@ -443,11 +489,13 @@
                 grid-template-rows: auto;
                 height: auto;
             }
-            .map-container { grid-column: 1 / 3; grid-row: 1; height: 50vh; }
-            .global-stats { grid-column: 1; grid-row: 2; }
-            .country-list { grid-column: 2; grid-row: 2; max-height: 40vh; }
-            .news-panel { grid-column: 1 / 3; grid-row: 3; }
-            .bottom-panel { grid-column: 1 / 3; grid-row: 4; }
+            .cruise-card { grid-column: 1 / 3; grid-row: 1; }
+            .map-container { grid-column: 1 / 3; grid-row: 2; height: 50vh; }
+            .global-stats { grid-column: 1; grid-row: 3; }
+            .country-list { grid-column: 2; grid-row: 3; max-height: 40vh; }
+            .news-panel { grid-column: 1 / 3; grid-row: 4; }
+            .bottom-panel { grid-column: 1 / 3; grid-row: 5; }
+            .cruise-info { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 768px) {
@@ -464,6 +512,8 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
+
+            .nav-subtitle { display: none; }
 
             .nav-status span:last-child {
                 display: none;
@@ -482,16 +532,26 @@
                 height: auto;
             }
 
-            .map-container {
+            .cruise-card {
                 grid-column: 1;
                 grid-row: 1;
+            }
+
+            .cruise-info {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .map-container {
+                grid-column: 1;
+                grid-row: 2;
                 height: 45vh;
                 min-height: 250px;
             }
 
             .global-stats {
                 grid-column: 1;
-                grid-row: 2;
+                grid-row: 3;
             }
 
             .stat-grid {
@@ -500,7 +560,7 @@
             }
 
             .stat-value {
-                font-size: 20px;
+                font-size: 24px;
             }
 
             .stat-label {
@@ -509,19 +569,19 @@
 
             .country-list {
                 grid-column: 1;
-                grid-row: 3;
+                grid-row: 4;
                 max-height: 35vh;
             }
 
             .news-panel {
                 grid-column: 1;
-                grid-row: 4;
+                grid-row: 5;
                 max-height: 35vh;
             }
 
             .bottom-panel {
                 grid-column: 1;
-                grid-row: 5;
+                grid-row: 6;
             }
 
             .prevention-grid {
@@ -589,12 +649,13 @@
                     <line x1="10.3" y1="21.7" x2="6.1" y2="25.9" stroke="rgba(59, 130, 246, 0.3)" stroke-width="0.8"/>
                 </svg>
             </div>
-            <span class="nav-title">汉坦病毒全球爆发实时看板</span>
+            <span class="nav-title">汉坦病毒疫情看板</span>
+            <span class="nav-subtitle">大西洋号邮轮事件</span>
         </div>
         <div class="nav-right">
             <div class="nav-status">
                 <span class="status-dot"></span>
-                <span>实时监控中</span>
+                <span>疫情监控中</span>
             </div>
             <div class="nav-update" id="lastUpdate">最后更新: --</div>
         </div>
@@ -602,44 +663,69 @@
 
     <!-- 主内容 -->
     <div class="main">
+        <!-- 邮轮疫情信息 -->
+        <div class="card cruise-card">
+            <div class="card-header">
+                <div class="card-title">🚢 大西洋号邮轮 (MV Hondius) 疫情</div>
+                <span class="card-badge badge-red">紧急</span>
+            </div>
+            <div class="cruise-info">
+                <div class="cruise-detail">
+                    <div class="cruise-detail-label">涉及人数</div>
+                    <div class="cruise-detail-value" id="cruisePeople">--</div>
+                </div>
+                <div class="cruise-detail">
+                    <div class="cruise-detail-label">确诊 / 疑似</div>
+                    <div class="cruise-detail-value" id="cruiseCases">--</div>
+                </div>
+                <div class="cruise-detail">
+                    <div class="cruise-detail-label">病毒株</div>
+                    <div class="cruise-detail-value" id="cruiseVirus">--</div>
+                </div>
+                <div class="cruise-detail">
+                    <div class="cruise-detail-label">传播方式</div>
+                    <div class="cruise-detail-value highlight" id="cruiseTransmission">--</div>
+                </div>
+                <div class="cruise-detail">
+                    <div class="cruise-detail-label">WHO 风险评估</div>
+                    <div class="cruise-detail-value" id="cruiseRisk">--</div>
+                </div>
+                <div class="cruise-detail">
+                    <div class="cruise-detail-label">CDC 响应级别</div>
+                    <div class="cruise-detail-value highlight" id="cruiseCDC">--</div>
+                </div>
+            </div>
+        </div>
+
         <!-- 全球统计 -->
         <div class="card global-stats">
             <div class="card-header">
-                <div class="card-title">📊 全球统计</div>
+                <div class="card-title">📊 核心数据</div>
                 <span class="card-badge badge-red">实时</span>
             </div>
             <div class="stat-grid">
                 <div class="stat-item">
                     <div class="stat-value red" id="totalCases">--</div>
-                    <div class="stat-label">确诊总数</div>
-                    <div class="stat-new" id="newCases">今日新增: --</div>
+                    <div class="stat-label">总病例</div>
+                    <div class="stat-note" id="suspectedNote">疑似: --</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-value orange" id="totalDeaths">--</div>
-                    <div class="stat-label">死亡总数</div>
-                    <div class="stat-new" id="newDeaths">今日新增: --</div>
+                    <div class="stat-label">死亡</div>
+                </div>
+                <div class="stat-item stat-highlight">
+                    <div class="stat-value red" id="caseFatality">--</div>
+                    <div class="stat-label">病死率 (CFR)</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value blue" id="totalSevere">--</div>
-                    <div class="stat-label">重症病例</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value green" id="caseFatality">--</div>
-                    <div class="stat-label">病死率</div>
+                    <div class="stat-value cyan" id="totalSevere">--</div>
+                    <div class="stat-label">重症</div>
                 </div>
             </div>
             <div class="data-source">
-                数据来源: WHO、ECDC、各国CDC · 统计起始: 2025年游轮疫情
+                数据来源: WHO Disease Outbreak News, CDC, ECDC<br>
+                统计起始: 2026年5月大西洋号邮轮疫情
             </div>
-        </div>
-
-        <!-- 各国数据列表 -->
-        <div class="card country-list">
-            <div class="card-header">
-                <div class="card-title">🌍 各国数据</div>
-                <span class="card-badge badge-blue" id="countryCount">-- 个国家</span>
-            </div>
-            <div id="countryList"></div>
         </div>
 
         <!-- 地图 -->
@@ -663,10 +749,19 @@
             </div>
         </div>
 
+        <!-- 各国数据 -->
+        <div class="card country-list">
+            <div class="card-header">
+                <div class="card-title">🌍 涉及国家</div>
+                <span class="card-badge badge-blue" id="countryCount">-- 个国家</span>
+            </div>
+            <div id="countryList"></div>
+        </div>
+
         <!-- 新闻 -->
         <div class="card news-panel">
             <div class="card-header">
-                <div class="card-title">📰 最新疫情</div>
+                <div class="card-title">📰 疫情动态</div>
                 <span class="card-badge badge-green" id="newsCount">-- 条</span>
             </div>
             <div id="newsList"></div>
@@ -692,40 +787,18 @@
         let dataCache = null;
 
         // ═══════════════════════════════════════════════════════════
-        //  数据源配置
-        // ═══════════════════════════════════════════════════════════
-        const DATA_SOURCES = {
-            // WHO 官方数据 API
-            who: 'https://api.who.int/dashboard/covid19',
-            // ECDC 欧洲数据中心
-            ecdc: 'https://opendata.ecdc.europa.eu/public/download/Total',
-            // ProMED 疫情报告
-            promed: 'https://promedmail.org',
-            // 备用: 本地数据
-            fallback: 'data/latest_data.json'
-        };
-
-        // ═══════════════════════════════════════════════════════════
         //  数据加载
         // ═══════════════════════════════════════════════════════════
         async function loadData() {
             try {
-                // 尝试从多个数据源加载
-                const response = await fetch(DATA_SOURCES.fallback);
+                const response = await fetch('data/latest_data.json');
                 if (!response.ok) throw new Error('数据加载失败');
                 dataCache = await response.json();
                 renderDashboard(dataCache);
                 updateLastUpdateTime();
             } catch (error) {
                 console.error('数据加载失败:', error);
-                // 使用内嵌数据作为 fallback
-                loadFallbackData();
             }
-        }
-
-        function loadFallbackData() {
-            console.log('使用内嵌数据');
-            // 这里可以添加默认数据
         }
 
         function updateLastUpdateTime() {
@@ -740,6 +813,7 @@
         //  渲染仪表盘
         // ═══════════════════════════════════════════════════════════
         function renderDashboard(data) {
+            renderCruiseInfo(data.cruise_ship);
             renderGlobalStats(data.global);
             renderCountryList(data.regions);
             renderMap(data.outbreaks);
@@ -747,38 +821,31 @@
             renderPrevention(data.risk.prevention_tips);
         }
 
-        function renderGlobalStats(global) {
-            document.getElementById('totalCases').textContent = 
-                global.confirmed_cases.toLocaleString();
-            document.getElementById('totalDeaths').textContent = 
-                global.deaths.toLocaleString();
-            document.getElementById('totalSevere').textContent = 
-                global.severe_cases.toLocaleString();
-            document.getElementById('caseFatality').textContent = 
-                global.case_fatality_rate + '%';
+        function renderCruiseInfo(cruise) {
+            document.getElementById('cruisePeople').textContent = `${cruise.total_people} 人`;
+            document.getElementById('cruiseCases').textContent = 
+                `${cruise.confirmed} 确诊 / ${cruise.suspected} 疑似`;
+            document.getElementById('cruiseVirus').textContent = cruise.virus;
+            document.getElementById('cruiseTransmission').textContent = cruise.transmission;
+            document.getElementById('cruiseRisk').innerHTML = 
+                `<span class="risk-badge risk-low-badge">全球: 低</span> <span class="risk-badge risk-medium-badge">邮轮: 中</span>`;
+            document.getElementById('cruiseCDC').textContent = cruise.cdc_level || 'Level 3 紧急响应';
+        }
 
-            // 新增数据
-            if (global.new_cases) {
-                document.getElementById('newCases').textContent = 
-                    `今日新增: ${global.new_cases.toLocaleString()}`;
-            }
-            if (global.new_deaths) {
-                document.getElementById('newDeaths').textContent = 
-                    `今日新增: ${global.new_deaths.toLocaleString()}`;
-            }
+        function renderGlobalStats(global) {
+            document.getElementById('totalCases').textContent = global.confirmed_cases;
+            document.getElementById('suspectedNote').textContent = `疑似: ${global.suspected_cases}`;
+            document.getElementById('totalDeaths').textContent = global.deaths;
+            document.getElementById('caseFatality').textContent = global.case_fatality_rate + '%';
+            document.getElementById('totalSevere').textContent = global.severe_cases;
         }
 
         function renderCountryList(regions) {
             const container = document.getElementById('countryList');
-            document.getElementById('countryCount').textContent = 
-                `${regions.length} 个国家`;
+            document.getElementById('countryCount').textContent = `${regions.length} 个国家`;
 
             container.innerHTML = regions.map(r => {
                 const riskClass = `risk-${r.risk_level}`;
-                const trendIcon = r.trend === 'increasing' ? '↑' : 
-                                 r.trend === 'decreasing' ? '↓' : '→';
-                const trendClass = r.trend === 'increasing' ? 'trend-up' : 
-                                  r.trend === 'decreasing' ? 'trend-down' : 'trend-stable';
 
                 return `
                     <div class="country-item ${riskClass}" 
@@ -786,11 +853,11 @@
                         <div class="country-info">
                             <div class="country-name">${r.name}</div>
                             <div class="country-region">${r.region} · ${r.main_strain}</div>
+                            <div class="country-detail">${r.detail || ''}</div>
                         </div>
                         <div class="country-stats">
-                            <div class="country-cases">${r.confirmed.toLocaleString()}</div>
+                            <div class="country-cases">${r.confirmed}</div>
                             <div class="country-deaths">死亡 ${r.deaths}</div>
-                            <div class="country-trend ${trendClass}">${trendIcon} ${r.trend}</div>
                         </div>
                     </div>
                 `;
@@ -799,33 +866,28 @@
 
         function renderMap(locations) {
             if (!map) {
-                // 初始化地图
                 map = L.map('map', {
-                    center: [30, 100],
-                    zoom: 3,
+                    center: [10, -20],
+                    zoom: 2,
                     zoomControl: false,
                     attributionControl: false
                 });
 
-                // 暗色地图瓦片
                 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
                     maxZoom: 19,
                     subdomains: 'abcd'
                 }).addTo(map);
 
-                // 添加缩放控件到右下角
                 L.control.zoom({ position: 'bottomright' }).addTo(map);
             }
 
-            // 清除旧标记
             markers.forEach(m => map.removeLayer(m));
             markers = [];
 
-            // 添加新标记
             locations.forEach(loc => {
                 const color = loc.risk === 'high' ? '#ef4444' : 
                              loc.risk === 'medium' ? '#f97316' : '#10b981';
-                const size = Math.max(8, Math.min(20, loc.cases / 100));
+                const size = loc.name.includes('邮轮') ? 18 : Math.max(8, loc.cases * 2);
 
                 const marker = L.circleMarker([loc.lat, loc.lng], {
                     radius: size,
@@ -840,15 +902,13 @@
                     <div style="min-width: 200px;">
                         <h3 style="margin: 0 0 8px 0; font-size: 14px;">${loc.name}</h3>
                         <div style="font-size: 12px; color: #64748b; margin-bottom: 4px;">
-                            病例: <b style="color: #f8fafc;">${loc.cases.toLocaleString()}</b>
+                            病例: <b style="color: #f8fafc;">${loc.cases}</b>
                         </div>
                         <div style="font-size: 12px; color: #64748b; margin-bottom: 4px;">
                             风险等级: <b style="color: ${color};">${loc.risk === 'high' ? '高' : loc.risk === 'medium' ? '中' : '低'}</b>
                         </div>
                         <div style="font-size: 12px; color: #64748b;">
-                            类型: ${loc.type === 'outbreak' ? '爆发' : 
-                                   loc.type === 'endemic' ? '地方性流行' : 
-                                   loc.type === 'seasonal' ? '季节性' : '偶发'}
+                            类型: ${loc.type === 'outbreak' ? '疫情爆发' : '地方性流行'}
                         </div>
                     </div>
                 `);
@@ -856,10 +916,9 @@
                 markers.push(marker);
             });
 
-            // 自适应地图范围
             if (markers.length > 0) {
                 const group = L.featureGroup(markers);
-                map.fitBounds(group.getBounds().pad(0.1));
+                map.fitBounds(group.getBounds().pad(0.15));
             }
         }
 
@@ -922,13 +981,11 @@
         }
 
         function togglePrevention(element) {
-            // 关闭其他已展开的项
             document.querySelectorAll('.prevention-item.expanded').forEach(item => {
                 if (item !== element) {
                     item.classList.remove('expanded');
                 }
             });
-            // 切换当前项
             element.classList.toggle('expanded');
         }
 
@@ -937,12 +994,9 @@
         // ═══════════════════════════════════════════════════════════
         document.addEventListener('DOMContentLoaded', () => {
             loadData();
-
-            // 每 30 分钟自动刷新
             setInterval(loadData, 30 * 60 * 1000);
         });
 
-        // 窗口 resize 时重绘地图
         window.addEventListener('resize', () => {
             if (map) map.invalidateSize();
         });
