@@ -127,8 +127,14 @@
 
         .cruise-info {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 16px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
+            gap: 12px;
+        }
+
+        /* 传播方式占2列宽 */
+        .cruise-detail:nth-child(4) {
+            grid-column: span 2;
         }
 
         .cruise-detail {
@@ -136,18 +142,22 @@
             border-radius: 8px;
             padding: 12px;
             border-left: 3px solid #f97316;
+            min-width: 0;
         }
 
         .cruise-detail-label {
             font-size: 11px;
             color: #64748b;
             margin-bottom: 4px;
+            white-space: nowrap;
         }
 
         .cruise-detail-value {
             font-size: 14px;
             font-weight: 600;
             color: #f8fafc;
+            word-break: break-word;
+            line-height: 1.4;
         }
 
         .cruise-detail-value.highlight {
@@ -495,7 +505,8 @@
             .country-list { grid-column: 2; grid-row: 3; max-height: 40vh; }
             .news-panel { grid-column: 1 / 3; grid-row: 4; }
             .bottom-panel { grid-column: 1 / 3; grid-row: 5; }
-            .cruise-info { grid-template-columns: 1fr 1fr; }
+            .cruise-info { grid-template-columns: repeat(2, 1fr); }
+            .cruise-detail:nth-child(4) { grid-column: span 2; }
         }
 
         @media (max-width: 768px) {
@@ -541,6 +552,7 @@
                 grid-template-columns: 1fr;
                 gap: 8px;
             }
+            .cruise-detail:nth-child(4) { grid-column: span 1; }
 
             .map-container {
                 grid-column: 1;
