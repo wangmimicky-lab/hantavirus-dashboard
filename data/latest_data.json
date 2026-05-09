@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-09T11:50:43.355525",
+  "timestamp": "2026-05-09T14:17:18.528816",
   "global": {
     "confirmed_cases": 8,
     "suspected_cases": 2,
@@ -8,7 +8,7 @@
     "case_fatality_rate": 38,
     "new_cases": 0,
     "new_deaths": 0,
-    "last_updated": "2026-05-08 23:59",
+    "last_updated": "2026-05-09 14:17",
     "data_sources": [
       "WHO",
       "CDC",
