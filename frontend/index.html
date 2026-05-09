@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉坦病毒全球爆发实时看板</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            background: #0a0e17;
+            color: #e0e6ed;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ─── 导航栏 ─────────────────────────────────────── */
+        .navbar {
+            background: rgba(10, 14, 23, 0.95);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 0 24px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-left { display: flex; align-items: center; gap: 12px; }
+        .nav-logo {
+            width: 28px; height: 28px;
+            background: linear-gradient(135deg, #ef4444, #f97316);
+            border-radius: 6px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 16px;
+        }
+        .nav-title { font-size: 16px; font-weight: 600; color: #f8fafc; }
+        .nav-right { display: flex; align-items: center; gap: 16px; }
+        .nav-status {
+            display: flex; align-items: center; gap: 6px;
+            font-size: 12px; color: #94a3b8;
+        }
+        .status-dot {
+            width: 8px; height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .nav-update {
+            font-size: 12px; color: #64748b;
+            padding: 4px 10px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 4px;
+        }
+
+        /* ─── 主内容 ─────────────────────────────────────── */
+        .main {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 320px 1fr 320px;
+            grid-template-rows: auto 1fr auto;
+            gap: 16px;
+            height: calc(100vh - 56px);
+        }
+
+        /* ─── 卡片样式 ─────────────────────────────────────── */
+        .card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 10px;
+            padding: 16px;
+            backdrop-filter: blur(8px);
+            overflow: hidden;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-badge {
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+        .badge-red { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        .badge-orange { background: rgba(249, 115, 22, 0.2); color: #f97316; }
+        .badge-blue { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+        .badge-green { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+
+        /* ─── 全球统计 ─────────────────────────────────────── */
+        .global-stats {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .stat-item {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #f8fafc;
+            font-variant-numeric: tabular-nums;
+        }
+        .stat-value.red { color: #ef4444; }
+        .stat-value.orange { color: #f97316; }
+        .stat-value.blue { color: #3b82f6; }
+        .stat-value.green { color: #10b981; }
+
+        .stat-label {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+
+        .stat-trend {
+            font-size: 11px;
+            margin-top: 4px;
+        }
+        .trend-up { color: #ef4444; }
+        .trend-down { color: #10b981; }
+        .trend-stable { color: #64748b; }
+
+        /* ─── 各国数据列表 ─────────────────────────────────────── */
+        .country-list {
+            grid-column: 1;
+            grid-row: 2;
+            overflow-y: auto;
+        }
+
+        .country-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 12px;
+            margin-bottom: 6px;
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 8px;
+            border-left: 3px solid transparent;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .country-item:hover {
+            background: rgba(30, 41, 59, 0.6);
+            border-left-color: #3b82f6;
+        }
+
+        .country-item.risk-high { border-left-color: #ef4444; }
+        .country-item.risk-medium { border-left-color: #f97316; }
+        .country-item.risk-low { border-left-color: #10b981; }
+
+        .country-info { flex: 1; }
+        .country-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #f8fafc;
+        }
+        .country-region {
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 2px;
+        }
+
+        .country-stats {
+            text-align: right;
+        }
+        .country-cases {
+            font-size: 14px;
+            font-weight: 600;
+            color: #f8fafc;
+            font-variant-numeric: tabular-nums;
+        }
+        .country-deaths {
+            font-size: 11px;
+            color: #ef4444;
+        }
+
+        .country-trend {
+            font-size: 10px;
+            margin-top: 2px;
+        }
+
+        /* ─── 地图区域 ─────────────────────────────────────── */
+        .map-container {
+            grid-column: 2;
+            grid-row: 1 / 3;
+            position: relative;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 8px;
+            padding: 12px;
+            backdrop-filter: blur(8px);
+        }
+
+        .map-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .legend-dot.high { background: #ef4444; box-shadow: 0 0 8px rgba(239, 68, 68, 0.5); }
+        .legend-dot.medium { background: #f97316; box-shadow: 0 0 8px rgba(249, 115, 22, 0.5); }
+        .legend-dot.low { background: #10b981; box-shadow: 0 0 8px rgba(16, 185, 129, 0.5); }
+
+        /* ─── 新闻区域 ─────────────────────────────────────── */
+        .news-panel {
+            grid-column: 3;
+            grid-row: 1 / 3;
+            overflow-y: auto;
+        }
+
+        .news-item {
+            padding: 12px;
+            margin-bottom: 10px;
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 8px;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            transition: all 0.2s;
+        }
+
+        .news-item:hover {
+            background: rgba(30, 41, 59, 0.6);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .news-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .news-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #f8fafc;
+            flex: 1;
+        }
+
+        .news-severity {
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 8px;
+        }
+        .severity-critical { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        .severity-high { background: rgba(249, 115, 22, 0.2); color: #f97316; }
+        .severity-medium { background: rgba(234, 179, 8, 0.2); color: #eab308; }
+        .severity-low { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+        .severity-info { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+
+        .news-meta {
+            font-size: 11px;
+            color: #64748b;
+            margin-bottom: 6px;
+        }
+
+        .news-summary {
+            font-size: 12px;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        /* ─── 底部信息 ─────────────────────────────────────── */
+        .bottom-panel {
+            grid-column: 1 / 4;
+            grid-row: 3;
+        }
+
+        .prevention-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        .prevention-item {
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .prevention-icon {
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+
+        .prevention-text {
+            font-size: 12px;
+            color: #94a3b8;
+            line-height: 1.4;
+        }
+
+        /* ─── 滚动条 ─────────────────────────────────────── */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(59, 130, 246, 0.3);
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(59, 130, 246, 0.5);
+        }
+
+        /* ─── 响应式 ─────────────────────────────────────── */
+        @media (max-width: 1200px) {
+            .main {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                height: auto;
+            }
+            .map-container { grid-column: 1 / 3; grid-row: 1; }
+            .global-stats { grid-column: 1; grid-row: 2; }
+            .country-list { grid-column: 2; grid-row: 2; }
+            .news-panel { grid-column: 1 / 3; grid-row: 3; }
+            .bottom-panel { grid-column: 1 / 3; grid-row: 4; }
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            .map-container { grid-column: 1; grid-row: 1; }
+            .global-stats { grid-column: 1; grid-row: 2; }
+            .country-list { grid-column: 1; grid-row: 3; }
+            .news-panel { grid-column: 1; grid-row: 4; }
+            .bottom-panel { grid-column: 1; grid-row: 5; }
+            .prevention-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="nav-logo">🦠</div>
+            <span class="nav-title">汉坦病毒全球爆发实时看板</span>
+        </div>
+        <div class="nav-right">
+            <div class="nav-status">
+                <span class="status-dot"></span>
+                <span>实时监控中</span>
+            </div>
+            <div class="nav-update" id="lastUpdate">最后更新: --</div>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <div class="main">
+        <!-- 全球统计 -->
+        <div class="card global-stats">
+            <div class="card-header">
+                <div class="card-title">📊 全球统计</div>
+                <span class="card-badge badge-red">实时</span>
+            </div>
+            <div class="stat-grid">
+                <div class="stat-item">
+                    <div class="stat-value red" id="totalCases">--</div>
+                    <div class="stat-label">确诊总数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value orange" id="totalDeaths">--</div>
+                    <div class="stat-label">死亡总数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value blue" id="totalSevere">--</div>
+                    <div class="stat-label">重症病例</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value green" id="caseFatality">--</div>
+                    <div class="stat-label">病死率</div>
+                </div>
+            </div>
+            <div style="font-size: 12px; color: #64748b; margin-top: 8px;">
+                数据来源: WHO, ECDC, CDC, ProMED
+            </div>
+        </div>
+
+        <!-- 各国数据列表 -->
+        <div class="card country-list">
+            <div class="card-header">
+                <div class="card-title">🌍 各国数据</div>
+                <span class="card-badge badge-blue" id="countryCount">-- 个国家</span>
+            </div>
+            <div id="countryList"></div>
+        </div>
+
+        <!-- 地图 -->
+        <div class="card map-container">
+            <div id="map"></div>
+            <div class="map-overlay">
+                <div class="map-legend">
+                    <div class="legend-item">
+                        <div class="legend-dot high"></div>
+                        <span>高风险</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot medium"></div>
+                        <span>中风险</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot low"></div>
+                        <span>低风险</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 新闻 -->
+        <div class="card news-panel">
+            <div class="card-header">
+                <div class="card-title">📰 最新疫情</div>
+                <span class="card-badge badge-green" id="newsCount">-- 条</span>
+            </div>
+            <div id="newsList"></div>
+        </div>
+
+        <!-- 底部预防 -->
+        <div class="card bottom-panel">
+            <div class="card-header">
+                <div class="card-title">🛡️ 预防措施</div>
+            </div>
+            <div class="prevention-grid" id="preventionGrid"></div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // ═══════════════════════════════════════════════════════════
+        //  全局状态
+        // ═══════════════════════════════════════════════════════════
+        let map = null;
+        let markers = [];
+        let dataCache = null;
+
+        // ═══════════════════════════════════════════════════════════
+        //  数据加载
+        // ═══════════════════════════════════════════════════════════
+        async function loadData() {
+            try {
+                const response = await fetch('data/latest_data.json');
+                if (!response.ok) throw new Error('数据加载失败');
+                dataCache = await response.json();
+                renderDashboard(dataCache);
+                updateLastUpdateTime();
+            } catch (error) {
+                console.error('数据加载失败:', error);
+                // 使用内嵌数据作为 fallback
+                loadFallbackData();
+            }
+        }
+
+        function loadFallbackData() {
+            // 如果 fetch 失败（本地文件），使用内嵌数据
+            console.log('使用内嵌数据');
+            // 这里可以添加默认数据
+        }
+
+        function updateLastUpdateTime() {
+            if (dataCache && dataCache.timestamp) {
+                const date = new Date(dataCache.timestamp);
+                document.getElementById('lastUpdate').textContent = 
+                    `最后更新: ${date.toLocaleString('zh-CN')}`;
+            }
+        }
+
+        // ═══════════════════════════════════════════════════════════
+        //  渲染仪表盘
+        // ═══════════════════════════════════════════════════════════
+        function renderDashboard(data) {
+            renderGlobalStats(data.global);
+            renderCountryList(data.regions);
+            renderMap(data.outbreaks);
+            renderNews(data.news);
+            renderPrevention(data.risk.prevention_tips);
+        }
+
+        function renderGlobalStats(global) {
+            document.getElementById('totalCases').textContent = 
+                global.confirmed_cases.toLocaleString();
+            document.getElementById('totalDeaths').textContent = 
+                global.deaths.toLocaleString();
+            document.getElementById('totalSevere').textContent = 
+                global.severe_cases.toLocaleString();
+            document.getElementById('caseFatality').textContent = 
+                global.case_fatality_rate + '%';
+        }
+
+        function renderCountryList(regions) {
+            const container = document.getElementById('countryList');
+            document.getElementById('countryCount').textContent = 
+                `${regions.length} 个国家`;
+
+            container.innerHTML = regions.map(r => {
+                const riskClass = `risk-${r.risk_level}`;
+                const trendIcon = r.trend === 'increasing' ? '↑' : 
+                                 r.trend === 'decreasing' ? '↓' : '→';
+                const trendClass = r.trend === 'increasing' ? 'trend-up' : 
+                                  r.trend === 'decreasing' ? 'trend-down' : 'trend-stable';
+
+                return `
+                    <div class="country-item ${riskClass}" 
+                         onclick="focusCountry(${r.lat || 0}, ${r.lng || 0})">
+                        <div class="country-info">
+                            <div class="country-name">${r.name}</div>
+                            <div class="country-region">${r.region} · ${r.main_strain}</div>
+                        </div>
+                        <div class="country-stats">
+                            <div class="country-cases">${r.confirmed.toLocaleString()}</div>
+                            <div class="country-deaths">死亡 ${r.deaths}</div>
+                            <div class="country-trend ${trendClass}">${trendIcon} ${r.trend}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderMap(locations) {
+            if (!map) {
+                // 初始化地图
+                map = L.map('map', {
+                    center: [30, 100],
+                    zoom: 3,
+                    zoomControl: false,
+                    attributionControl: false
+                });
+
+                // 暗色地图瓦片
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                    maxZoom: 19,
+                    subdomains: 'abcd'
+                }).addTo(map);
+
+                // 添加缩放控件到右下角
+                L.control.zoom({ position: 'bottomright' }).addTo(map);
+            }
+
+            // 清除旧标记
+            markers.forEach(m => map.removeLayer(m));
+            markers = [];
+
+            // 添加新标记
+            locations.forEach(loc => {
+                const color = loc.risk === 'high' ? '#ef4444' : 
+                             loc.risk === 'medium' ? '#f97316' : '#10b981';
+                const size = Math.max(8, Math.min(20, loc.cases / 100));
+
+                const marker = L.circleMarker([loc.lat, loc.lng], {
+                    radius: size,
+                    fillColor: color,
+                    color: color,
+                    weight: 2,
+                    opacity: 0.8,
+                    fillOpacity: 0.4
+                }).addTo(map);
+
+                marker.bindPopup(`
+                    <div style="min-width: 200px;">
+                        <h3 style="margin: 0 0 8px 0; font-size: 14px;">${loc.name}</h3>
+                        <div style="font-size: 12px; color: #64748b; margin-bottom: 4px;">
+                            病例: <b style="color: #f8fafc;">${loc.cases.toLocaleString()}</b>
+                        </div>
+                        <div style="font-size: 12px; color: #64748b; margin-bottom: 4px;">
+                            风险等级: <b style="color: ${color};">${loc.risk === 'high' ? '高' : loc.risk === 'medium' ? '中' : '低'}</b>
+                        </div>
+                        <div style="font-size: 12px; color: #64748b;">
+                            类型: ${loc.type === 'outbreak' ? '爆发' : 
+                                   loc.type === 'endemic' ? '地方性流行' : 
+                                   loc.type === 'seasonal' ? '季节性' : '偶发'}
+                        </div>
+                    </div>
+                `);
+
+                markers.push(marker);
+            });
+
+            // 自适应地图范围
+            if (markers.length > 0) {
+                const group = L.featureGroup(markers);
+                map.fitBounds(group.getBounds().pad(0.1));
+            }
+        }
+
+        function focusCountry(lat, lng) {
+            if (map && lat && lng) {
+                map.setView([lat, lng], 5, { animate: true });
+            }
+        }
+
+        function renderNews(news) {
+            const container = document.getElementById('newsList');
+            document.getElementById('newsCount').textContent = `${news.length} 条`;
+
+            container.innerHTML = news.map(n => {
+                const severityClass = `severity-${n.severity}`;
+                const severityText = n.severity === 'critical' ? '严重' :
+                                    n.severity === 'high' ? '高' :
+                                    n.severity === 'medium' ? '中' :
+                                    n.severity === 'low' ? '低' : '信息';
+
+                return `
+                    <div class="news-item">
+                        <div class="news-header">
+                            <div class="news-title">${n.title}</div>
+                            <span class="news-severity ${severityClass}">${severityText}</span>
+                        </div>
+                        <div class="news-meta">${n.date} · ${n.source}</div>
+                        <div class="news-summary">${n.summary}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderPrevention(tips) {
+            const container = document.getElementById('preventionGrid');
+            const icons = ['🧤', '🧴', '🏠', '💉', '🏥'];
+
+            container.innerHTML = tips.map((tip, i) => `
+                <div class="prevention-item">
+                    <div class="prevention-icon">${icons[i] || '🛡️'}</div>
+                    <div class="prevention-text">${tip}</div>
+                </div>
+            `).join('');
+        }
+
+        // ═══════════════════════════════════════════════════════════
+        //  初始化
+        // ═══════════════════════════════════════════════════════════
+        document.addEventListener('DOMContentLoaded', () => {
+            loadData();
+
+            // 每 30 分钟自动刷新
+            setInterval(loadData, 30 * 60 * 1000);
+        });
+
+        // 窗口 resize 时重绘地图
+        window.addEventListener('resize', () => {
+            if (map) map.invalidateSize();
+        });
+    </script>
+</body>
+</html>
