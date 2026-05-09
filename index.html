@@ -295,6 +295,17 @@
         .leaflet-container {
             overflow: hidden !important;
             touch-action: manipulation;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* 移动端地图优化 */
+        @media (max-width: 768px) {
+            .leaflet-container {
+                height: 100% !important;
+            }
+            .leaflet-control-zoom {
+                display: none;
+            }
         }
 
         .map-overlay {
