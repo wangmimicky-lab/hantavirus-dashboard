@@ -281,31 +281,31 @@
             grid-column: 2;
             grid-row: 2 / 4;
             position: relative;
-            overflow: hidden;
+            padding: 0;
+            overflow: visible;
+            min-height: 400px;
         }
 
         #map {
             width: 100%;
             height: 100%;
-            border-radius: 8px;
-            overflow: hidden;
+            border-radius: 10px;
+            z-index: 1;
+            min-height: 400px;
         }
 
-        /* 防止地图缩放时出现空白 */
+        /* 修复 Leaflet 地图空白问题 */
         .leaflet-container {
-            overflow: hidden !important;
-            touch-action: manipulation;
-            -webkit-overflow-scrolling: touch;
+            width: 100% !important;
+            height: 100% !important;
         }
 
-        /* 移动端地图优化 */
-        @media (max-width: 768px) {
-            .leaflet-container {
-                height: 100% !important;
-            }
-            .leaflet-control-zoom {
-                display: none;
-            }
+        .leaflet-tile-container {
+            transform: none !important;
+        }
+
+        .leaflet-tile {
+            transition: none !important;
         }
 
         .map-overlay {
@@ -519,7 +519,7 @@
                 height: auto;
             }
             .cruise-card { grid-column: 1 / 3; grid-row: 1; }
-            .map-container { grid-column: 1 / 3; grid-row: 2; height: 50vh; }
+            .map-container { grid-column: 1 / 3; grid-row: 2; height: 50vh; min-height: 300px; }
             .global-stats { grid-column: 1; grid-row: 3; }
             .country-list { grid-column: 2; grid-row: 3; max-height: 40vh; }
             .news-panel { grid-column: 1 / 3; grid-row: 4; }
@@ -576,8 +576,8 @@
             .map-container {
                 grid-column: 1;
                 grid-row: 2;
-                height: 45vh;
-                min-height: 250px;
+                height: 50vh;
+                min-height: 300px;
             }
 
             .global-stats {
@@ -897,15 +897,23 @@
                     center: [10, -20],
                     zoom: 2,
                     zoomControl: false,
-                    attributionControl: false
+                    attributionControl: false,
+                    preferCanvas: true
                 });
 
                 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
                     maxZoom: 19,
-                    subdomains: 'abcd'
+                    subdomains: 'abcd',
+                    updateWhenZooming: false,
+                    keepBuffer: 2
                 }).addTo(map);
 
                 L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+                // 确保地图容器尺寸正确后刷新
+                setTimeout(() => {
+                    if (map) map.invalidateSize();
+                }, 100);
             }
 
             markers.forEach(m => map.removeLayer(m));
@@ -940,10 +948,13 @@
                 markers.push(marker);
             });
 
-            if (markers.length > 0) {
-                const group = L.featureGroup(markers);
-                map.fitBounds(group.getBounds().pad(0.15));
-            }
+            // 延迟调整视野，确保地图尺寸正确
+            setTimeout(() => {
+                if (markers.length > 0 && map) {
+                    const group = L.featureGroup(markers);
+                    map.fitBounds(group.getBounds().pad(0.15));
+                }
+            }, 150);
         }
 
         function focusCountry(lat, lng) {
@@ -1021,8 +1032,12 @@
             setInterval(loadData, 30 * 60 * 1000);
         });
 
+        let resizeTimer;
         window.addEventListener('resize', () => {
-            if (map) map.invalidateSize();
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                if (map) map.invalidateSize();
+            }, 200);
         });
     </script>
 </body>
