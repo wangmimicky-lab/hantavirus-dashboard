@@ -1,24 +1,27 @@
 {
-  "timestamp": "2026-05-09T18:00:00.000000",
+  "timestamp": "2026-05-10T08:00:00.000000",
   "global": {
     "confirmed_cases": 8,
-    "suspected_cases": 3,
+    "suspected_cases": 0,
     "deaths": 3,
-    "severe_cases": 2,
+    "severe_cases": 1,
     "case_fatality_rate": 38,
     "new_cases": 0,
     "new_deaths": 0,
-    "last_updated": "2026-05-09 18:00",
+    "last_updated": "2026-05-10 08:00",
     "data_sources": [
       "WHO",
       "CDC",
-      "ECDC"
+      "ECDC",
+      "PHAC"
     ],
-    "note": "数据统计起始: 2026年5月大西洋号邮轮疫情",
+    "note": "数据统计起始: 2026年5月大西洋号邮轮疫情。WHO DON600（5月8日）为最新官方通报",
     "virus_strain": "安第斯病毒 (Andes virus, ANDV)",
-    "transmission": "人传人（罕见）",
+    "transmission": "人传人（罕见，长期密切接触）",
     "who_risk_level": "全球人口: 低 | 邮轮人员: 中",
-    "cdc_level": "Level 3 紧急响应"
+    "cdc_level": "Level 3 紧急响应",
+    "hospitalized": 4,
+    "hospitals": "南非约翰内斯堡ICU(1)、荷兰(2)、瑞士苏黎世(1)"
   },
   "regions": [
     {
@@ -31,7 +34,7 @@
       "main_strain": "ANDV",
       "lat": -33.92,
       "lng": 18.42,
-      "detail": "1名重症患者ICU治疗中（Case 3，德国籍）"
+      "detail": "Case 3（德国籍男性）在约翰内斯堡ICU治疗中，病情正在好转"
     },
     {
       "name": "荷兰",
@@ -43,7 +46,7 @@
       "main_strain": "ANDV",
       "lat": 52.36,
       "lng": 4.89,
-      "detail": "2名船员5月6-7日紧急撤离治疗，KLM空乘检测阴性"
+      "detail": "2名船员5月6-7日经佛得角医疗后送抵达荷兰，分别在两家医院治疗"
     },
     {
       "name": "西班牙",
@@ -51,11 +54,11 @@
       "confirmed": 0,
       "deaths": 0,
       "risk_level": "medium",
-      "trend": "watching",
+      "trend": "active",
       "main_strain": "ANDV",
-      "lat": 38.35,
-      "lng": -0.48,
-      "detail": "阿利坎特1名疑似病例正在接受检测，正筹备接收邮轮140+人"
+      "lat": 28.47,
+      "lng": -16.25,
+      "detail": "特内里费Granadilla港筹备接收140+人，国民警卫队已进驻，临时隔离设施搭建中"
     },
     {
       "name": "英国",
@@ -67,7 +70,7 @@
       "main_strain": "ANDV",
       "lat": 51.5,
       "lng": -0.12,
-      "detail": "2人自我隔离，4人留在圣赫勒拿，1人在Tristan da Cunha疑似感染"
+      "detail": "接触者追踪持续中，圣赫勒拿4人、特里斯坦达库尼亚1名疑似已排除"
     },
     {
       "name": "美国",
@@ -79,63 +82,92 @@
       "main_strain": "ANDV",
       "lat": 39.83,
       "lng": -98.58,
-      "detail": "至少6个州健康监测中，正派遣包机接回美国乘客，隔离至内布拉斯加"
+      "detail": "正派遣包机接回美国乘客，将隔离至内布拉斯加。CDC团队已部署至加那利群岛。至少6州健康监测中"
+    },
+    {
+      "name": "瑞士",
+      "region": "欧洲",
+      "confirmed": 1,
+      "deaths": 0,
+      "risk_level": "low",
+      "trend": "stable",
+      "main_strain": "ANDV",
+      "lat": 47.38,
+      "lng": 8.54,
+      "detail": "1名患者在苏黎世医院接受治疗"
+    },
+    {
+      "name": "德国",
+      "region": "欧洲",
+      "confirmed": 0,
+      "deaths": 0,
+      "risk_level": "low",
+      "trend": "resolved",
+      "main_strain": "ANDV",
+      "lat": 52.52,
+      "lng": 13.41,
+      "detail": "原疑似病例经PCR和血清学检测均为阴性，已排除"
     }
   ],
   "outbreaks": [
     {
       "name": "大西洋号邮轮 (MV Hondius)",
-      "lat": 16.5,
-      "lng": -24.0,
+      "lat": 28.05,
+      "lng": -16.58,
       "cases": 8,
       "risk": "high",
       "type": "outbreak",
-      "detail": "正驶向加那利群岛特内里费，预计5月10日抵达"
+      "detail": "已抵达加那利群岛特内里费Granadilla港，WHO总干事亲自监督撤离"
     },
     {
-      "name": "南非开普敦",
+      "name": "南非开普敦/约翰内斯堡",
       "lat": -33.92,
       "lng": 18.42,
       "cases": 2,
       "risk": "high",
       "type": "outbreak",
-      "detail": "1名重症ICU，1名死亡(荷兰籍女性)"
+      "detail": "1名重症ICU好转中，1名死亡(荷兰籍女性)"
     },
     {
-      "name": "荷兰阿姆斯特丹",
+      "name": "荷兰",
       "lat": 52.36,
       "lng": 4.89,
       "cases": 2,
       "risk": "medium",
       "type": "outbreak",
-      "detail": "2名船员撤离治疗中"
+      "detail": "2名船员医疗后送抵达，分别在两家医院治疗"
     },
     {
-      "name": "西班牙特内里费",
-      "lat": 28.47,
-      "lng": -16.25,
-      "cases": 0,
-      "risk": "medium",
-      "type": "outbreak",
-      "detail": "筹备接收140+乘客和船员，严格隔离"
-    },
-    {
-      "name": "英国伦敦",
-      "lat": 51.5,
-      "lng": -0.12,
-      "cases": 2,
+      "name": "瑞士苏黎世",
+      "lat": 47.38,
+      "lng": 8.54,
+      "cases": 1,
       "risk": "low",
       "type": "outbreak",
-      "detail": "接触者追踪中"
+      "detail": "1名患者住院治疗"
     }
   ],
   "news": [
+    {
+      "title": "WHO总干事抵达特内里费监督邮轮乘客撤离",
+      "date": "2026-05-09",
+      "source": "AP/WHO",
+      "severity": "high",
+      "summary": "WHO总干事谭德塞抵达西班牙特内里费，亲自监督大西洋号邮轮上140多名乘客和船员的撤离工作。Granadilla港已搭建临时隔离设施，西班牙国民警卫队进驻。谭德塞向当地居民保证风险可控。"
+    },
+    {
+      "title": "美国专家质疑CDC在疫情响应中的角色",
+      "date": "2026-05-09",
+      "source": "Sun Chronicle",
+      "severity": "medium",
+      "summary": "随着汉坦病毒邮轮疫情发展，美国专家公开质疑CDC的响应力度和可见度。美国正派遣包机接回邮轮上的美国乘客，回国后将隔离至内布拉斯加州。CDC团队已部署至加那利群岛评估风险。"
+    },
     {
       "title": "西班牙筹备接收汉坦病毒邮轮，特内里费准备严格隔离140+人",
       "date": "2026-05-09",
       "source": "AP/PBS",
       "severity": "high",
-      "summary": "西班牙当局正在筹备接收大西洋号邮轮上140多名乘客和船员，邮轮预计5月10日抵达加那利群岛特内里费。卫生官员表示将执行严格隔离措施，所有人员抵达后将完全隔离。同时西班牙阿利坎特报告1名疑似病例正在医院接受检测。"
+      "summary": "西班牙当局正在筹备接收大西洋号邮轮上140多名乘客和船员，邮轮预计5月10日抵达加那利群岛特内里费。卫生官员表示将执行严格隔离措施，所有人员抵达后将完全隔离。同时西班牙阿利坎特1名疑似病例已排除。"
     },
     {
       "title": "美国派遣包机接回邮轮乘客，至少6州健康监测",
@@ -145,32 +177,18 @@
       "summary": "美国正派遣包机从大西洋号邮轮接回剩余美国乘客，回国后将隔离在内布拉斯加州。CDC已部署团队至加那利群岛评估暴露风险。至少6个美国州正在监测曾乘坐该船的旅客。WHO确认此次疫情的病毒株为安第斯病毒，仅通过长期密切接触传播。"
     },
     {
-      "title": "西班牙和特里斯坦达库尼亚发现新疑似病例",
-      "date": "2026-05-08",
-      "source": "Forbes/Jerusalem Post",
-      "severity": "medium",
-      "summary": "英国卫生官员确认一名新疑似病例——一名英国男子位于偏远南大西洋岛屿特里斯坦达库尼亚。同时西班牙阿利坎特一名女性出现汉坦病毒症状正在医院接受检测。WHO确认KLM航班空乘（曾短暂接触患者）检测阴性，支持人际传播需长期密切接触的观点。"
-    },
-    {
       "title": "WHO确认大西洋号邮轮汉坦病毒疫情：8例确诊，3例死亡",
       "date": "2026-05-08",
       "source": "WHO",
       "severity": "critical",
-      "summary": "世界卫生组织发布最新通报，确认大西洋号邮轮集群感染事件共报告8例病例（6例确诊+2例疑似），其中3例死亡。确诊病毒株为安第斯病毒(ANDV)，具备人传人潜力。病死率约38%。"
+      "summary": "世界卫生组织发布DON600最新通报，确认共报告8例病例（6例确诊+2例疑似），其中3例死亡。确诊病毒株为安第斯病毒(ANDV)，具备人传人潜力。病死率约38%。4名患者住院（南非ICU 1人、荷兰2人、瑞士1人）。"
     },
     {
-      "title": "2名船员紧急撤离至荷兰接受治疗",
-      "date": "2026-05-07",
-      "source": "ECDC",
-      "severity": "high",
-      "summary": "大西洋号邮轮上2名感染汉坦病毒的船员于5月6日至7日被紧急撤离，空运至荷兰接受治疗，目前情况稳定。此前已有1名患者留在南非ICU治疗。"
-    },
-    {
-      "title": "CDC将疫情列为3级紧急响应，关注人际传播风险",
-      "date": "2026-05-06",
-      "source": "CDC",
-      "severity": "high",
-      "summary": "美国CDC将该疫情列为Level 3紧急响应。WHO初步调查怀疑存在罕见的人际传播，特别是在共用客舱的亲密接触者（如夫妻）之间。"
+      "title": "西班牙和特里斯坦达库尼亚发现新疑似病例",
+      "date": "2026-05-08",
+      "source": "Forbes/Jerusalem Post",
+      "severity": "medium",
+      "summary": "英国卫生官员确认一名新疑似病例——一名英国男子位于偏远南大西洋岛屿特里斯坦达库尼亚。同时西班牙阿利坎特一名女性出现汉坦病毒症状正在医院接受检测。WHO确认KLM航班空乘检测阴性，支持人际传播需长期密切接触的观点。"
     }
   ],
   "risk": {
@@ -188,7 +206,7 @@
     "sail_date": "2026-04-01",
     "route": "阿根廷乌斯怀亚 → 南极 → 南乔治亚 → 特里斯坦达库尼亚 → 圣赫勒拿 → 阿森松岛 → 佛得角 → 加那利群岛",
     "confirmed": 6,
-    "suspected": 3,
+    "suspected": 2,
     "deaths": 3,
     "icu": 1,
     "evacuated": 3,
@@ -196,8 +214,10 @@
     "transmission": "人际传播（罕见，共用客舱亲密接触者）",
     "virus": "安第斯病毒 (Andes virus, ANDV)",
     "cdc_level": "Level 3 紧急响应",
-    "current_location": "大西洋，正驶向加那利群岛特内里费",
+    "current_location": "已抵达加那利群岛特内里费Granadilla港",
     "expected_arrival": "2026-05-10",
-    "operator": "Oceanwide Expeditions (荷兰)"
+    "operator": "Oceanwide Expeditions (荷兰)",
+    "status": "正在撤离中，WHO总干事现场监督",
+    "disembarkation_plan": "140+乘客和船员将在特内里费完全隔离"
   }
 }
