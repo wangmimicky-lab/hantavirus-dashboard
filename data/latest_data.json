@@ -1,12 +1,14 @@
 {
-  "timestamp": "2026-05-19T14:00:00.000000",
+  "timestamp": "2026-05-20T06:00:00.000000",
   "global": {
     "confirmed_cases": 9,
-    "suspected_cases": 2,
+    "suspected_cases": 0,
+    "probable_cases": 2,
+    "total_cases": 11,
     "deaths": 3,
-    "severe_cases": 2,
-    "case_fatality_rate": 25,
-    "new_cases": 1,
+    "severe_cases": 1,
+    "case_fatality_rate": 27,
+    "new_cases": 0,
     "new_deaths": 0,
     "last_updated": "2026-05-19 14:00",
     "data_sources": [
@@ -16,14 +18,14 @@
       "RIVM",
       "Oceanwide Expeditions"
     ],
-    "note": "数据统计截至: 2026年05月19日。ECDC 5月18日更新通报总病例数增至12例（9例确诊+2例可能+1例待确认），3例死亡。新增1例加拿大确诊患者（5月16日报告，原乘客，症状轻微，在不列颠哥伦比亚省隔离）。WHO自5月13日发布第三份DON报告后未发布新通报。大西洋号(MV Hondius)已于5月18日抵达荷兰鹿特丹港，27名船员及医疗人员仍在船上，将分阶段下船并遵守隔离规定。船只将由EWS Group进行彻底清洁消毒。加拿大公共卫生署确认首例与该邮轮相关的汉坦病毒病例。ECDC对欧盟/欧洲经济区一般人群风险评估为非常低。",
+    "note": "数据统计截至: 2026年05月19日。ECDC 5月19日更新：总病例11例（9例确诊+2例可能），此前第12例待确认病例（美国乘客）因PCR检测阴性且无症状已被从病例计数中移除。3例死亡，病死率27%。大西洋号(MV Hondius)已于5月18日11时抵达鹿特丹港，20名船员和2名RIVM医护人员已下船进入专门隔离设施，5名船员留船配合清洁消毒。船只由EWS Group进行全面清洁。Oceanwide Expeditions宣布取消5月29日至6月13日的两个航次，6月13日起恢复运营。WHO自5月13日发布第三份DON报告后未发布新通报。",
     "virus_strain": "安第斯病毒 (Andes virus, ANDV)",
     "transmission": "人传人（罕见，长期密切接触）",
     "who_risk_level": "全球人口: 低 | 邮轮人员: 中",
     "cdc_level": "Level 3 紧急响应",
-    "hospitalized": 5,
+    "hospitalized": 4,
     "hospitals": "南非约翰内斯堡ICU(1)、荷兰(2)、瑞士苏黎世(1)、法国巴黎ICU(1)",
-    "inconclusive_cases": 1,
+    "inconclusive_cases": 0,
     "ecdc_risk_level": "EU/EEA人口: 非常低"
   },
   "regions": [
@@ -49,7 +51,7 @@
       "main_strain": "ANDV",
       "lat": 52.36,
       "lng": 4.89,
-      "detail": "Case 5（船医，41岁男性）和Case 6（船员，56岁男性）5月6-7日经佛得角医疗后送抵达荷兰，分别在两家医院治疗，病情稳定。大西洋号已于5月18日抵达鹿特丹港，25名船员和2名医护将分阶段下船隔离。"
+      "detail": "Case 5（船医，41岁男性）和Case 6（船员，56岁男性）5月6-7日经佛得角医疗后送抵达荷兰，分别在两家医院治疗，病情稳定。大西洋号已于5月18日抵达鹿特丹港，20名船员和2名医护已下船进入专门隔离设施，5名船员留船配合清洁。"
     },
     {
       "name": "西班牙",
@@ -85,7 +87,7 @@
       "main_strain": "ANDV",
       "lat": 39.83,
       "lng": -98.58,
-      "detail": "CDC持续监测中。约41名美国接触者在16个州接受健康监测。18名美国乘客在内布拉斯加州国家隔离单位和亚特兰大接受42天医学观察。Case 11（美国乘客）检测结果不一致，正在重新检测，目前无症状。"
+      "detail": "CDC持续监测中。约41名美国接触者在16个州接受健康监测。此前待确认病例(Case 11)经PCR检测为阴性且无症状，已被ECDC从病例计数中移除。18名美国乘客在内布拉斯加州国家隔离单位和亚特兰大接受42天医学观察。"
     },
     {
       "name": "加拿大",
@@ -121,7 +123,7 @@
       "main_strain": "ANDV",
       "lat": 48.86,
       "lng": 2.35,
-      "detail": "Case 9（法国乘客）在遣返航班上出现症状，目前在巴黎ICU治疗，病情严重。巴斯德研究所已完成病毒全基因组测序，确认与南美已知安第斯病毒匹配，未发现新特性。法国已确认22名密切接触者。"
+      "detail": "Case 9（法国乘客）在遣返航班上出现症状，目前在巴黎ICU治疗，病情严重需使用人工肺(ECMO)。巴斯德研究所已完成病毒全基因组测序，确认与南美已知安第斯病毒匹配，未发现新特性。法国已确认22名密切接触者。"
     },
     {
       "name": "德国",
@@ -141,10 +143,10 @@
       "name": "大西洋号邮轮 (MV Hondius)",
       "lat": 51.9,
       "lng": 4.5,
-      "cases": 12,
+      "cases": 11,
       "risk": "high",
       "type": "outbreak",
-      "detail": "ECDC 5月18日通报共12例（9确诊+2可能+1待确认），含1例加拿大新增。5月18日已抵达荷兰鹿特丹港，开始消毒程序。"
+      "detail": "ECDC 5月19日更新共11例（9确诊+2可能），此前第12例待确认病例已排除。5月18日已抵达荷兰鹿特丹港，20名船员下船隔离，5名留船，开始消毒程序。"
     },
     {
       "name": "南非开普敦/约翰内斯堡",
@@ -180,7 +182,7 @@
       "cases": 1,
       "risk": "medium",
       "type": "outbreak",
-      "detail": "Case 9在遣返途中发病，目前在巴黎ICU治疗，病情严重"
+      "detail": "Case 9在遣返途中发病，目前在巴黎ICU治疗使用人工肺(ECMO)，病情严重"
     },
     {
       "name": "加拿大不列颠哥伦比亚省",
@@ -194,16 +196,28 @@
   ],
   "news": [
     {
-      "date": "2026-05-18",
-      "title": "ECDC更新通报：总病例增至12例（9确诊+2可能+1待确认），含加拿大新增1例确诊，无新增死亡",
+      "date": "2026-05-19",
+      "title": "ECDC更新通报：总病例调整为11例（9确诊+2可能），此前第12例待确认病例（美国乘客）经PCR检测阴性被排除，无新增死亡",
       "source": "ECDC",
       "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak"
     },
     {
       "date": "2026-05-18",
-      "title": "大西洋号(MV Hondius)抵达荷兰鹿特丹港，27名船员将分阶段下船，船只开始消毒程序",
-      "source": "AP News / DW",
-      "url": "https://www.dw.com/en/mv-hondius-docks-in-rotterdam-after-hantavirus-ordeal/a-77192012"
+      "title": "Oceanwide Expeditions宣布取消5月29日至6月13日两个航次，6月13日起恢复运营；20名船员已下船进入隔离设施",
+      "source": "Oceanwide Expeditions",
+      "url": "https://oceanwide-expeditions.com/blog/press-update-m-v-hondius-18-may-2026-18-30-hrs-cet"
+    },
+    {
+      "date": "2026-05-18",
+      "title": "大西洋号(MV Hondius)抵达荷兰鹿特丹港，20名船员与2名RIVM医护下船进入专门隔离设施，5名船员留船配合清洁消毒",
+      "source": "AP News / Oceanwide Expeditions",
+      "url": "https://oceanwide-expeditions.com/blog/press-update-m-v-hondius-18-may-2026-18-30-hrs-cet"
+    },
+    {
+      "date": "2026-05-18",
+      "title": "法国巴斯德研究所完成安第斯病毒全基因组测序：与南美已知病毒匹配，未发现更易传播或更危险特性",
+      "source": "AP News / Pasteur Institute",
+      "url": "https://apnews.com/article/hantavirus-ship-rotterdam-b45915182f4c8ad6f273f10ffe89286a"
     },
     {
       "date": "2026-05-16",
@@ -213,21 +227,9 @@
     },
     {
       "date": "2026-05-18",
-      "title": "大西洋号(MV Hondius)抵达荷兰鹿特丹港，25名船员将分阶段下船隔离，船只交由EWS Group消毒",
-      "source": "AP News / Oceanwide Expeditions",
+      "title": "大西洋号(MV Hondius)抵达鹿特丹港进行消毒，20名船员下船隔离，5名留船",
+      "source": "AP News",
       "url": "https://apnews.com/article/hantavirus-ship-rotterdam-b45915182f4c8ad6f273f10ffe89286a"
-    },
-    {
-      "date": "2026-05-18",
-      "title": "法国巴斯德研究所完成安第斯病毒全基因组测序：与南美已知病毒匹配，未发现更易传播或更危险特性",
-      "source": "AP News / Pasteur Institute",
-      "url": "https://apnews.com/article/hantavirus-ship-rotterdam-b45915182f4c8ad6f273f10ffe89286a"
-    },
-    {
-      "date": "2026-05-17",
-      "title": "Oceanwide Expeditions公布清洁方案：选定EWS Group进行船只消毒，船员将分阶段下船隔离",
-      "source": "Oceanwide Expeditions",
-      "url": "https://oceanwide-expeditions.com/blog/press-update-m-v-hondius-17-may-2026-14-00-hrs-cet"
     }
   ],
   "risk": {
@@ -245,20 +247,21 @@
     "sail_date": "2026-04-01",
     "route": "阿根廷乌斯怀亚 → 南极 → 南乔治亚 → 特里斯坦达库尼亚 → 圣赫勒拿 → 阿森松岛 → 佛得角 → 加那利群岛",
     "confirmed": 9,
-    "suspected": 2,
+    "probable": 2,
+    "suspected": 0,
     "deaths": 3,
-    "icu": 2,
+    "icu": 1,
     "evacuated": 122,
     "evacuation_date": "2026-05-10（全部乘客撤离完成）",
     "transmission": "人际传播（罕见，共用客舱亲密接触者）",
     "virus": "安第斯病毒 (Andes virus, ANDV)",
     "cdc_level": "Level 3 紧急响应",
-    "current_location": "荷兰鹿特丹港（已抵达），船员正在分阶段下船隔离，船只进行消毒中",
+    "current_location": "荷兰鹿特丹港（已抵达），20名船员已下船隔离，5名留船配合清洁，船只进行消毒中",
     "expected_arrival": "2026年5月18日已抵达鹿特丹",
     "operator": "Oceanwide Expeditions (荷兰)",
-    "status": "ECDC 5月18日更新通报：总病例增至12例（9例确诊+2例可能+1例待确认），3例死亡，病死率25%。5月16日加拿大报告首例与该邮轮相关的确诊病例，患者症状轻微。5月18日：大西洋号已抵达荷兰鹿特丹港，27名船员及医护人员在船，将分阶段下船隔离。船只交由EWS Group进行全面清洁消毒。WHO自5月13日以来未发布新通报。运营商Oceanwide Expeditions尚未最终决定是否恢复运营。",
-    "disembarkation_plan": "87名乘客和35名船员（来自22个国家）已全部撤离并返回家园。邮轮已于5月18日抵达鹿特丹，25名船员和2名医护人员将分阶段下船并遵守荷兰RIVM隔离规定。荷兰卫生部门将对船只进行检查后方可恢复运营。",
-    "inconclusive": 1,
-    "total_cases": 12
+    "status": "ECDC 5月19日更新：总病例调整为11例（9例确诊+2例可能），此前第12例待确认病例（美国乘客）因PCR阴性且无症状被排除。3例死亡，病死率27%。5月18日：大西洋号于11时抵达鹿特丹港，20名船员和2名RIVM医护人员已下船进入专门隔离设施，5名船员留船配合清洁消毒。船只由EWS Group进行清洁，此后由荷兰卫生部门检查。Oceanwide Expeditions宣布取消HDS02-26（5月29日-6月5日）和HDS03-26（6月5日-13日）两个航次以完成清洁流程。所有6月13日起的航次按计划运行，船舶将于6月13日从斯瓦尔巴朗伊尔城恢复运营。WHO自5月13日以来未发布新通报。",
+    "disembarkation_plan": "87名乘客和35名船员（来自22个国家）已全部撤离并返回家园。邮轮已于5月18日抵达鹿特丹，20名船员和2名RIVM医护人员已下船进入专门隔离设施。5名船员留船配合EWS Group的清洁消毒程序。完成清洁和检查后，船舶将于6月13日从朗伊尔城恢复运营。",
+    "inconclusive": 0,
+    "total_cases": 11
   }
 }
