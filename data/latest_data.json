@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-21T18:06:01.795100",
+  "timestamp": "2026-05-22T08:08:41.153148",
   "global": {
     "confirmed_cases": 9,
     "suspected_cases": 0,
@@ -10,7 +10,7 @@
     "case_fatality_rate": 27,
     "new_cases": 0,
     "new_deaths": 0,
-    "last_updated": "2026-05-21 18:06",
+    "last_updated": "2026-05-22 08:08",
     "data_sources": [
       "WHO",
       "CDC",
@@ -18,7 +18,7 @@
       "RIVM",
       "Oceanwide Expeditions"
     ],
-    "note": "数据统计截至: 2026年5月21日18时。ECDC 5月20日更新仍为最新通报：总病例维持11例（9例确诊+2例可能），无新增病例和死亡。3例死亡，病死率27%。船只于5月18日抵达鹿特丹港后，EWS Group正在进行全面清洁消毒中。CDC于5月19日对内布拉斯加州国家隔离单位的两名乘客发出隔离令，要求其至少隔离至5月底。各接收国继续对接触者进行健康监测中。WHO自5月13日发布第三份DON报告后未发布新通报。ECDC评估对EU/EEA一般人群风险仍为非常低。",
+    "note": "数据统计截至: 2026-05-22 08:08。ECDC 5月21日更新仍为最新通报：总病例维持11例（9例确诊+2例可能），无新增病例和死亡。3例死亡，病死率27%。船只仍在鹿特丹港进行清洁消毒中。5月21日，CIDRAP与NEJM Evidence联合发布10例确诊病例的详细临床报告（Public Health Alerts），详细描述了从首发病例（荷兰鸟类学家，4月6日发病，4月11日死亡）到后续感染病例的完整病程，包括仍在约翰内斯堡ICU和苏黎世医院住院治疗的两名患者情况。同日，NPR报道一名美国乘客对联邦隔离令表示不满。Virological.org发布了此次疫情安第斯病毒序列的分子进化初步分析。WHO自5月13日发布第三份DON报告后未发布新通报。ECDC评估对EU/EEA一般人群风险仍为非常低。",
     "virus_strain": "安第斯病毒 (Andes virus, ANDV)",
     "transmission": "人传人（罕见，长期密切接触）",
     "who_risk_level": "全球人口: 低 | 邮轮人员: 中",
@@ -146,7 +146,7 @@
       "cases": 11,
       "risk": "high",
       "type": "outbreak",
-      "detail": "ECDC 5月20日更新：总病例维持11例（9确诊+2可能），无新增病例和死亡。5月18日已抵达荷兰鹿特丹港，20名船员下船隔离，5名留船，EWS Group进行消毒中，周期约数天。"
+      "detail": "ECDC 5月21日更新：总病例维持11例（9确诊+2可能），无新增病例和死亡。5月18日已抵达荷兰鹿特丹港，EWS Group进行消毒中。5月21日CIDRAP与NEJM Evidence发布10例病例详细临床报告。"
     },
     {
       "name": "南非开普敦/约翰内斯堡",
@@ -196,6 +196,30 @@
   ],
   "news": [
     {
+      "date": "2026-05-21",
+      "title": "ECDC 5月21日更新：总病例维持11例（9确诊+2可能），无新增病例和死亡，船只仍在鹿特丹港消毒中，对EU/EEA一般人群风险保持非常低",
+      "source": "ECDC",
+      "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak"
+    },
+    {
+      "date": "2026-05-21",
+      "title": "CIDRAP与NEJM Evidence联合发布Public Health Alerts报告：详细分析大西洋号10例安第斯病毒感染病例临床数据，3人死亡2人仍住院",
+      "source": "CIDRAP / NEJM Evidence",
+      "url": "https://www.cidrap.umn.edu/public-health-alerts/public-health-alerts-andes-hantavirus-cruise-ship-2026"
+    },
+    {
+      "date": "2026-05-21",
+      "title": "Virological.org发布大西洋号安第斯病毒疫情分子进化初步分析：病毒序列系首次公开",
+      "source": "Virological.org",
+      "url": "https://virological.org/t/molecular-evolutionary-analysis-of-the-current-mv-hondius-andes-virus-outbreak/1037"
+    },
+    {
+      "date": "2026-05-21",
+      "title": "NPR报道：美国乘客Angela Perryman对联邦汉坦病毒隔离令感到被背叛，称来美途中被告知不会强制隔离",
+      "source": "NPR",
+      "url": "https://www.npr.org/2026/05/21/nx-s1-5827015/american-passenger-order-hantavirus-quarantine"
+    },
+    {
       "date": "2026-05-20",
       "title": "ECDC 5月20日更新：总病例维持11例（9确诊+2可能），无新增病例和死亡，船只在鹿特丹港进行消毒，对EU/EEA一般人群风险保持非常低",
       "source": "ECDC",
@@ -206,30 +230,6 @@
       "title": "Forbes最新综述：大西洋号(MV Hondius)抵达鹿特丹进行消毒，计划6月13日复航，WHO称全球风险仍为低",
       "source": "Forbes",
       "url": "https://www.forbes.com/sites/maryroeloffs/2026/05/19/hantavirus-hit-cruise-ship-will-sail-again-in-june-latest-updates/"
-    },
-    {
-      "date": "2026-05-19",
-      "title": "CNN报道：多国对邮轮乘客采取不同隔离监测策略，安第斯病毒人际传播风险引发关注",
-      "source": "CNN",
-      "url": "https://edition.cnn.com/2026/05/19/health/countries-managing-hantavirus-travelers-different-ways"
-    },
-    {
-      "date": "2026-05-19",
-      "title": "美国CDC向内布拉斯加州国家隔离单位两名邮轮乘客发出联邦隔离令，要求至少隔离至5月底",
-      "source": "AP News / CDC",
-      "url": "https://apnews.com/article/hantavirus-ship-quarantine-andes-virus-302d45d77aac4d55aa76c43d79f54ec9"
-    },
-    {
-      "date": "2026-05-19",
-      "title": "ECDC更新通报：总病例调整为11例（9确诊+2可能），此前第12例待确认病例（美国乘客）经PCR检测阴性被排除，无新增死亡",
-      "source": "ECDC",
-      "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak"
-    },
-    {
-      "date": "2026-05-18",
-      "title": "Oceanwide Expeditions宣布取消5月29日至6月13日两个航次，6月13日起恢复运营；20名船员已下船进入隔离设施",
-      "source": "Oceanwide Expeditions",
-      "url": "https://oceanwide-expeditions.com/blog/press-update-m-v-hondius-18-may-2026-18-30-hrs-cet"
     }
   ],
   "risk": {
@@ -262,7 +262,7 @@
     "expected_arrival": "2026年5月18日已抵达鹿特丹",
     "operator": "Oceanwide Expeditions (荷兰)",
     "status": [
-      "ECDC 5月20日更新为最新通报：总病例维持11例（9例确诊+2例可能），无新增病例和死亡，船只消毒进行中。5月18日：大西洋号于11时抵达鹿特丹港，20名船员和2名RIVM医护人员已下船进入专门隔离设施，5名船员留船配合清洁消毒。船只由EWS Group进行清洁消毒中。5月19日：美国CDC对Nebraska国家隔离单位2名乘客发出联邦隔离令。Oceanwide Expeditions宣布取消HDS02-26（5月29日-6月5日）和HDS03-26（6月5日-13日）两个航次，所有6月13日起的航次按计划运行。WHO自5月13日以来未发布新通报。ECDC评估对EU/EEA一般人群风险仍为非常低。"
+      "ECDC 5月21日更新为最新通报：总病例维持11例（9例确诊+2例可能），无新增病例和死亡。5月21日CIDRAP与NEJM Evidence联合发布10例确诊病例的详细临床报告。船只在鹿特丹港由EWS Group进行清洁消毒中。美国CDC对Nebraska国家隔离单位2名乘客的联邦隔离令持续生效中。WHO自5月13日以来未发布新通报。ECDC评估对EU/EEA一般人群风险仍为非常低。"
     ],
     "disembarkation_plan": "87名乘客和35名船员（来自22个国家）已全部撤离并返回家园。邮轮已于5月18日抵达鹿特丹，20名船员和2名RIVM医护人员已下船进入专门隔离设施，接受医学检测和14天隔离观察。5名船员留船配合EWS Group的清洁消毒程序。完成清洁和检查后，船舶将于6月13日从朗伊尔城恢复运营。",
     "inconclusive": 0,
