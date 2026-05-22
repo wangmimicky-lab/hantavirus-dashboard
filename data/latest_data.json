@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-22T08:08:41.153148",
+  "timestamp": "2026-05-22T18:07:59.822615",
   "global": {
     "confirmed_cases": 9,
     "suspected_cases": 0,
@@ -10,7 +10,7 @@
     "case_fatality_rate": 27,
     "new_cases": 0,
     "new_deaths": 0,
-    "last_updated": "2026-05-22 08:08",
+    "last_updated": "2026-05-22 18:07",
     "data_sources": [
       "WHO",
       "CDC",
@@ -18,7 +18,7 @@
       "RIVM",
       "Oceanwide Expeditions"
     ],
-    "note": "数据统计截至: 2026-05-22 08:08。ECDC 5月21日更新仍为最新通报：总病例维持11例（9例确诊+2例可能），无新增病例和死亡。3例死亡，病死率27%。船只仍在鹿特丹港进行清洁消毒中。5月21日，CIDRAP与NEJM Evidence联合发布10例确诊病例的详细临床报告（Public Health Alerts），详细描述了从首发病例（荷兰鸟类学家，4月6日发病，4月11日死亡）到后续感染病例的完整病程，包括仍在约翰内斯堡ICU和苏黎世医院住院治疗的两名患者情况。同日，NPR报道一名美国乘客对联邦隔离令表示不满。Virological.org发布了此次疫情安第斯病毒序列的分子进化初步分析。WHO自5月13日发布第三份DON报告后未发布新通报。ECDC评估对EU/EEA一般人群风险仍为非常低。",
+    "note": "数据统计截至: 2026-05-22 18:07. ECDC 5月21日更新仍为最新通报：总病例维持11例（9例确诊+2例可能），无新增病例和死亡。3例死亡，病死率27%。船只仍在鹿特丹港进行清洁消毒中。5月21日，CIDRAP与NEJM Evidence联合发布10例确诊病例的详细临床报告（Public Health Alerts），详细描述了从首发病例（荷兰鸟类学家，4月6日发病，4月11日死亡）到后续感染病例的完整病程，包括仍在约翰内斯堡ICU和苏黎世医院住院治疗的两名患者情况。同日，NPR报道一名美国乘客对联邦隔离令表示不满。Virological.org发布了此次疫情安第斯病毒序列的分子进化初步分析。The Guardian发表评论文章，以本次疫情为案例讨论全球大流行防范体系缺口。WHO自5月13日发布第三份DON报告后未发布新通报。ECDC评估对EU/EEA一般人群风险仍为非常低。5月22日确认无新增病例或死亡报告。",
     "virus_strain": "安第斯病毒 (Andes virus, ANDV)",
     "transmission": "人传人（罕见，长期密切接触）",
     "who_risk_level": "全球人口: 低 | 邮轮人员: 中",
@@ -146,7 +146,7 @@
       "cases": 11,
       "risk": "high",
       "type": "outbreak",
-      "detail": "ECDC 5月21日更新：总病例维持11例（9确诊+2可能），无新增病例和死亡。5月18日已抵达荷兰鹿特丹港，EWS Group进行消毒中。5月21日CIDRAP与NEJM Evidence发布10例病例详细临床报告。"
+      "detail": "ECDC 5月21日更新：总病例维持11例（9确诊+2可能），无新增病例和死亡。5月18日已抵达荷兰鹿特丹港，EWS Group进行消毒中。5月21日CIDRAP与NEJM Evidence发布10例病例详细临床报告。The Guardian 5月21日发表评论文章探讨大流行防范体系。"
     },
     {
       "name": "南非开普敦/约翰内斯堡",
@@ -220,10 +220,10 @@
       "url": "https://www.npr.org/2026/05/21/nx-s1-5827015/american-passenger-order-hantavirus-quarantine"
     },
     {
-      "date": "2026-05-20",
-      "title": "ECDC 5月20日更新：总病例维持11例（9确诊+2可能），无新增病例和死亡，船只在鹿特丹港进行消毒，对EU/EEA一般人群风险保持非常低",
-      "source": "ECDC",
-      "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak"
+      "date": "2026-05-21",
+      "title": "The Guardian发表评论文章：从埃博拉和汉坦病毒疫情看全球大流行防范的迫切需求",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/may/21/the-ebola-and-hantavirus-outbreaks-warn-us-we-must-be-better-prepared-if-we-are-to-prevent-the-next-pandemic"
     },
     {
       "date": "2026-05-19",
