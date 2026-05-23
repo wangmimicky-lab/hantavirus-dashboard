@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-23T08:00:00.000000",
+  "timestamp": "2026-05-23T18:00:00.000000",
   "global": {
     "confirmed_cases": 12,
     "suspected_cases": 0,
@@ -8,9 +8,9 @@
     "deaths": 3,
     "severe_cases": 1,
     "case_fatality_rate": 25,
-    "new_cases": 1,
+    "new_cases": 0,
     "new_deaths": 0,
-    "last_updated": "2026-05-23 08:00",
+    "last_updated": "2026-05-23 18:00",
     "data_sources": [
       "WHO",
       "CDC",
@@ -18,13 +18,13 @@
       "RIVM",
       "Oceanwide Expeditions"
     ],
-    "note": "数据统计截至: 2026-05-23 08:00. 5月22日（周五），WHO总干事谭德塞在记者会上宣布第12例确诊病例：一名大西洋号船员从特内里费下船后被遣返荷兰，检测呈阳性，目前隔离中。总病例升至12例（全部确诊），死亡维持3例，病死率降至25%。ECDC同日更新页面至5月22日数据但尚未反映第12例（仍显示11例）。AP于5月22日发布长篇报道，描述在内布拉斯加州国家隔离单位接受42天医学观察的18名美国乘客的近况。NBC新闻、纽约时报等主流媒体广泛报道第12例。WHO自5月13日发布第三份DON报告后未发布新DON。CDC持续监测41名美国接触者。船只仍在鹿特丹港进行清洁消毒，计划6月13日复航。",
+    "note": "数据统计截至: 2026-05-23 18:00. 今日无新增病例报告。WHO自5月13日发布第三份DON报告后未发布新DON，5月22日WHO总干事谭德塞宣布第12例确诊病例后暂未更新DON页面。ECDC页面仍显示截至5月22日数据（11例）。Washington Post于5月23日发表两篇报道：一篇讲述南非科学家如何在24小时内识别出安第斯病毒株的幕后故事；另一篇详述18名美国乘客在内布拉斯加接受42天隔离的医学原理。船仍在鹿特丹港由EWS Group进行清洁消毒中。",
     "virus_strain": "安第斯病毒 (Andes virus, ANDV)",
     "transmission": "人传人（罕见，长期密切接触）",
     "who_risk_level": "全球人口: 低 | 邮轮人员: 中",
     "cdc_level": "Level 3 紧急响应",
     "hospitalized": 2,
-    "hospitals": "南非约翰内斯堡ICU(1)、荷兰(1)、瑞士苏黎世(1)、法国巴黎ICU(1)",
+    "hospitals": "南非约翰内斯堡ICU(1)、荷兰(2)、瑞士苏黎世(1)、法国巴黎ICU(1)",
     "inconclusive_cases": 0,
     "ecdc_risk_level": "EU/EEA人口: 非常低"
   },
@@ -39,7 +39,7 @@
       "main_strain": "ANDV",
       "lat": -33.92,
       "lng": 18.42,
-      "detail": "Case 3（英国籍男性）在约翰内斯堡ICU治疗中，病情正在好转。Case 2（荷兰籍女性）已死亡。"
+      "detail": "Case 3（英国籍男性）在约翰内斯堡ICU治疗中，病情正在好转。Case 2（荷兰籍女性）已死亡。南非科学家因在最早期识别出安第斯病毒株而受到全球关注。"
     },
     {
       "name": "荷兰",
@@ -87,7 +87,7 @@
       "main_strain": "ANDV",
       "lat": 39.83,
       "lng": -98.58,
-      "detail": "CDC持续监测中。约41名美国接触者在16个州接受健康监测。此前待确认病例(Case 11)经PCR检测为阴性且无症状，已被移除。18名美国乘客在内布拉斯加州国家隔离单位和亚特兰大接受42天医学观察。AP 5月22日报道称隔离中的美国乘客在内布拉斯加受到热情接待。"
+      "detail": "CDC持续监测中。约41名美国接触者在16个州接受健康监测。此前待确认病例(Case 11)经PCR检测为阴性且无症状，已被移除。18名美国乘客在内布拉斯加州国家隔离单位和亚特兰大接受42天医学观察。Washington Post 5月23日专题报道解释42天隔离期背后的医学原理——安第斯病毒最长潜伏期可达6周，需确保度过完整潜伏期。"
     },
     {
       "name": "加拿大",
@@ -146,7 +146,7 @@
       "cases": 12,
       "risk": "high",
       "type": "outbreak",
-      "detail": "5月22日WHO宣布第12例确诊病例（船员，在荷兰隔离）。ECDC 5月22日更新页面但尚未反映第12例。船只仍在鹿特丹港由EWS Group进行消毒中。计划6月13日复航。"
+      "detail": "5月22日WHO宣布第12例确诊病例（船员，在荷兰隔离）。ECDC 5月22日更新页面但尚未反映第12例（仍显示11例）。船只仍在鹿特丹港由EWS Group进行消毒中，计划6月13日复航。"
     },
     {
       "name": "南非开普敦/约翰内斯堡",
@@ -196,6 +196,18 @@
   ],
   "news": [
     {
+      "date": "2026-05-23",
+      "title": "Washington Post专题报道：南非科学家如何在24小时内从数千公里外识别出大西洋号上的安第斯病毒疫情——南非传染病专家Lucille Blumberg等人接到紧急邮件后快速确认病毒株的幕后故事",
+      "source": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/05/23/south-africa-hantavirus-diagnosis-scientists/26e188e8-567e-11f1-9c40-7a0a12d9e745_story.html"
+    },
+    {
+      "date": "2026-05-23",
+      "title": "Washington Post健康专栏：详解为何18名美国乘客需要接受42天（6周）隔离——安第斯病毒最长潜伏期可达6周，远超一般传染病检疫标准",
+      "source": "The Washington Post",
+      "url": "https://www.washingtonpost.com/wellness/2026/05/23/why-quarantine-hantavirus-is-so-long/"
+    },
+    {
       "date": "2026-05-22",
       "title": "WHO 5月22日记者会：总病例升至12例，新增1名船员确诊（在荷兰隔离），死亡维持3例未变。谭德塞呼吁各国继续密切监测所有乘客和船员",
       "source": "WHO / NBC News",
@@ -218,18 +230,6 @@
       "title": "CIDRAP与NEJM Evidence联合发布Public Health Alerts报告：详细分析大西洋号10例安第斯病毒感染病例临床数据，3人死亡2人仍住院",
       "source": "CIDRAP / NEJM Evidence",
       "url": "https://www.cidrap.umn.edu/public-health-alerts/public-health-alerts-andes-hantavirus-cruise-ship-2026"
-    },
-    {
-      "date": "2026-05-21",
-      "title": "Virological.org发布大西洋号安第斯病毒疫情分子进化初步分析：病毒序列系首次公开",
-      "source": "Virological.org",
-      "url": "https://virological.org/t/molecular-evolutionary-analysis-of-the-current-mv-hondius-andes-virus-outbreak/1037"
-    },
-    {
-      "date": "2026-05-21",
-      "title": "The Guardian发表评论文章：从埃博拉和汉坦病毒疫情看全球大流行防范的迫切需求",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/may/21/the-ebola-and-hantavirus-outbreaks-warn-us-we-must-be-better-prepared-if-we-are-to-prevent-the-next-pandemic"
     }
   ],
   "risk": {
@@ -262,7 +262,7 @@
     "expected_arrival": "2026年5月18日已抵达鹿特丹",
     "operator": "Oceanwide Expeditions (荷兰)",
     "status": [
-      "5月22日WHO总干事谭德塞在记者会上宣布第12例确诊病例：一名船员在荷兰隔离。总病例升至12例（全部确诊），死亡维持3例不变。ECDC已更新页面至5月22日但尚未反映第12例。AP/NBC/纽约时报等广泛报道。船只在鹿特丹港由EWS Group进行清洁消毒中，计划6月13日复航。"
+      "5月23日无新增病例。WHO自5月13日DON后未发布新DON（5月22日谭德塞记者会确认第12例但DON页面未更新）。Washington Post 5月23日发表两篇重要专题报道：（1）南非科学家识别病毒幕后故事；（2）42天隔离期的医学原理。船只在鹿特丹港由EWS Group进行清洁消毒中，计划6月13日复航。"
     ],
     "disembarkation_plan": "87名乘客和35名船员（来自22个国家）已全部撤离并返回家园。邮轮已于5月18日抵达鹿特丹，20名船员和2名RIVM医护人员已下船进入专门隔离设施，接受医学检测和14天隔离观察。5名船员留船配合EWS Group的清洁消毒程序。完成清洁和检查后，船舶将于6月13日从朗伊尔城恢复运营。",
     "inconclusive": 0,
