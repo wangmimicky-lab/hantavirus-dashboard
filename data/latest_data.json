@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-23T18:00:00.000000",
+  "timestamp": "2026-05-24T18:07:43.591414",
   "global": {
     "confirmed_cases": 12,
     "suspected_cases": 0,
@@ -10,15 +10,15 @@
     "case_fatality_rate": 25,
     "new_cases": 0,
     "new_deaths": 0,
-    "last_updated": "2026-05-23 18:00",
+    "last_updated": "2026-05-24 18:07",
     "data_sources": [
       "WHO",
       "CDC",
-      "ECDC",
+      "ECDC（24 May 2026更新）",
       "RIVM",
       "Oceanwide Expeditions"
     ],
-    "note": "数据统计截至: 2026-05-23 18:00. 今日无新增病例报告。WHO自5月13日发布第三份DON报告后未发布新DON，5月22日WHO总干事谭德塞宣布第12例确诊病例后暂未更新DON页面。ECDC页面仍显示截至5月22日数据（11例）。Washington Post于5月23日发表两篇报道：一篇讲述南非科学家如何在24小时内识别出安第斯病毒株的幕后故事；另一篇详述18名美国乘客在内布拉斯加接受42天隔离的医学原理。船仍在鹿特丹港由EWS Group进行清洁消毒中。",
+    "note": "数据统计截至: 2026-05-24 18:07. ECDC于5月24日更新页面，确认总病例增至12例（10确诊+2可能病例），3例死亡，其中1例为新增确诊船员。WHO自5月13日发布DON后未发布新DON。船仍在鹿特丹港进行清洁消毒中。ECDC对EU/EEA一般人群风险评级保持'非常低'。",
     "virus_strain": "安第斯病毒 (Andes virus, ANDV)",
     "transmission": "人传人（罕见，长期密切接触）",
     "who_risk_level": "全球人口: 低 | 邮轮人员: 中",
@@ -51,7 +51,7 @@
       "main_strain": "ANDV",
       "lat": 52.36,
       "lng": 4.89,
-      "detail": "5月22日WHO宣布第12例确诊病例为一名大西洋号船员，从特内里费下船后被遣返荷兰，检测呈阳性，目前已隔离。此外Case 5（船医，41岁男性）和Case 6（船员，56岁男性）仍在两家医院治疗，病情稳定。大西洋号已于5月18日抵达鹿特丹港，20名船员和2名医护已下船进入专门隔离设施，5名船员留船配合清洁消毒。"
+      "detail": "5月24日ECDC确认12例总病例中包括新增船员确诊。Case 5（船医，41岁男性）和Case 6（船员，56岁男性）仍在两家医院治疗，病情稳定。大西洋号船员在鹿特丹港隔离中。"
     },
     {
       "name": "西班牙",
@@ -146,7 +146,7 @@
       "cases": 12,
       "risk": "high",
       "type": "outbreak",
-      "detail": "5月22日WHO宣布第12例确诊病例（船员，在荷兰隔离）。ECDC 5月22日更新页面但尚未反映第12例（仍显示11例）。船只仍在鹿特丹港由EWS Group进行消毒中，计划6月13日复航。"
+      "detail": "5月24日ECDC确认总病例12例（10确诊+2可能），死亡维持3例未变。新确诊船员1例。船仍在鹿特丹港由EWS Group进行消毒中，计划6月13日复航。"
     },
     {
       "name": "南非开普敦/约翰内斯堡",
@@ -196,6 +196,12 @@
   ],
   "news": [
     {
+      "date": "2026-05-24",
+      "title": "ECDC更新页面至5月24日：确认总病例增至12例（10确诊+2可能），其中1例为新增船员确诊病例，无新增死亡（维持3例）。船只仍在鹿特丹港进行清洁消毒。EU/EEA一般人群风险保持非常低。",
+      "source": "ECDC",
+      "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak"
+    },
+    {
       "date": "2026-05-23",
       "title": "Washington Post专题报道：南非科学家如何在24小时内从数千公里外识别出大西洋号上的安第斯病毒疫情——南非传染病专家Lucille Blumberg等人接到紧急邮件后快速确认病毒株的幕后故事",
       "source": "The Washington Post",
@@ -224,12 +230,6 @@
       "title": "ECDC更新页面至5月22日：仍显示11例（9确诊+2可能），无新增，船只正在鹿特丹港消毒中，对EU/EEA一般人群风险保持非常低",
       "source": "ECDC",
       "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak"
-    },
-    {
-      "date": "2026-05-21",
-      "title": "CIDRAP与NEJM Evidence联合发布Public Health Alerts报告：详细分析大西洋号10例安第斯病毒感染病例临床数据，3人死亡2人仍住院",
-      "source": "CIDRAP / NEJM Evidence",
-      "url": "https://www.cidrap.umn.edu/public-health-alerts/public-health-alerts-andes-hantavirus-cruise-ship-2026"
     }
   ],
   "risk": {
@@ -247,7 +247,7 @@
     "sail_date": "2026-04-01",
     "route": "阿根廷乌斯怀亚 → 南极 → 南乔治亚 → 特里斯坦达库尼亚 → 圣赫勒拿 → 阿森松岛 → 佛得角 → 加那利群岛",
     "confirmed": 12,
-    "probable": 0,
+    "probable": 2,
     "suspected": 0,
     "deaths": 3,
     "icu": 1,
@@ -262,7 +262,7 @@
     "expected_arrival": "2026年5月18日已抵达鹿特丹",
     "operator": "Oceanwide Expeditions (荷兰)",
     "status": [
-      "5月23日无新增病例。WHO自5月13日DON后未发布新DON（5月22日谭德塞记者会确认第12例但DON页面未更新）。Washington Post 5月23日发表两篇重要专题报道：（1）南非科学家识别病毒幕后故事；（2）42天隔离期的医学原理。船只在鹿特丹港由EWS Group进行清洁消毒中，计划6月13日复航。"
+      "5月24日无新增死亡。ECDC 5月24日更新页面：确认12例（10确诊+2可能），其中1例为新增船员确诊，死亡维持3例。WHO暂未发布新的DON。船只在鹿特丹港由EWS Group进行清洁消毒中，计划6月13日复航。"
     ],
     "disembarkation_plan": "87名乘客和35名船员（来自22个国家）已全部撤离并返回家园。邮轮已于5月18日抵达鹿特丹，20名船员和2名RIVM医护人员已下船进入专门隔离设施，接受医学检测和14天隔离观察。5名船员留船配合EWS Group的清洁消毒程序。完成清洁和检查后，船舶将于6月13日从朗伊尔城恢复运营。",
     "inconclusive": 0,
