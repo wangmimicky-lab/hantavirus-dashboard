@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-24T18:07:43.591414",
+  "timestamp": "2026-05-25T08:00:00.000000",
   "global": {
     "confirmed_cases": 12,
     "suspected_cases": 0,
@@ -10,7 +10,7 @@
     "case_fatality_rate": 25,
     "new_cases": 0,
     "new_deaths": 0,
-    "last_updated": "2026-05-24 18:07",
+    "last_updated": "2026-05-25 08:00",
     "data_sources": [
       "WHO",
       "CDC",
@@ -18,7 +18,7 @@
       "RIVM",
       "Oceanwide Expeditions"
     ],
-    "note": "数据统计截至: 2026-05-24 18:07. ECDC于5月24日更新页面，确认总病例增至12例（10确诊+2可能病例），3例死亡，其中1例为新增确诊船员。WHO自5月13日发布DON后未发布新DON。船仍在鹿特丹港进行清洁消毒中。ECDC对EU/EEA一般人群风险评级保持'非常低'。",
+    "note": "数据统计截至: 2026-05-25 08:00. ECDC页面仍为5月24日更新，维持12例（10确诊+2可能），3例死亡，无新增。WHO自5月13日发布DON后未发布新DON。ECDC对EU/EEA一般人群风险评级保持'非常低'。船仍在鹿特丹港进行清洁消毒中，计划6月13日复航。",
     "virus_strain": "安第斯病毒 (Andes virus, ANDV)",
     "transmission": "人传人（罕见，长期密切接触）",
     "who_risk_level": "全球人口: 低 | 邮轮人员: 中",
@@ -39,7 +39,7 @@
       "main_strain": "ANDV",
       "lat": -33.92,
       "lng": 18.42,
-      "detail": "Case 3（英国籍男性）在约翰内斯堡ICU治疗中，病情正在好转。Case 2（荷兰籍女性）已死亡。南非科学家因在最早期识别出安第斯病毒株而受到全球关注。"
+      "detail": "Case 3（英国籍男性）在约翰内斯堡ICU治疗中，病情正在好转。Case 2（荷兰籍女性）已死亡。南非科学家因在最早期识别出安第斯病毒株而受到全球关注——5月23日华盛顿邮报和AP等多家媒体专题报道。"
     },
     {
       "name": "荷兰",
@@ -87,7 +87,7 @@
       "main_strain": "ANDV",
       "lat": 39.83,
       "lng": -98.58,
-      "detail": "CDC持续监测中。约41名美国接触者在16个州接受健康监测。此前待确认病例(Case 11)经PCR检测为阴性且无症状，已被移除。18名美国乘客在内布拉斯加州国家隔离单位和亚特兰大接受42天医学观察。Washington Post 5月23日专题报道解释42天隔离期背后的医学原理——安第斯病毒最长潜伏期可达6周，需确保度过完整潜伏期。"
+      "detail": "CDC持续监测中。约41名美国接触者在16个州接受健康监测。此前待确认病例(Case 11)经PCR检测为阴性且无症状，已被移除。18名美国乘客在内布拉斯加州国家隔离单位和亚特兰大接受42天医学观察。NPR 5月21日报道2名美国人被强制隔离。Washington Post 5月23日专题报道解释42天隔离期背后的医学原理——安第斯病毒最长潜伏期可达6周，需确保度过完整潜伏期。"
     },
     {
       "name": "加拿大",
@@ -146,7 +146,7 @@
       "cases": 12,
       "risk": "high",
       "type": "outbreak",
-      "detail": "5月24日ECDC确认总病例12例（10确诊+2可能），死亡维持3例未变。新确诊船员1例。船仍在鹿特丹港由EWS Group进行消毒中，计划6月13日复航。"
+      "detail": "5月24日ECDC确认总病例12例（10确诊+2可能），死亡维持3例未变。船仍在鹿特丹港由EWS Group进行消毒中，计划6月13日复航。ECDC页面截至5月25日仍为24日更新，无新增数据。"
     },
     {
       "name": "南非开普敦/约翰内斯堡",
@@ -197,9 +197,15 @@
   "news": [
     {
       "date": "2026-05-24",
-      "title": "ECDC更新页面至5月24日：确认总病例增至12例（10确诊+2可能），其中1例为新增船员确诊病例，无新增死亡（维持3例）。船只仍在鹿特丹港进行清洁消毒。EU/EEA一般人群风险保持非常低。",
+      "title": "ECDC更新页面至5月24日：确认总病例增至12例（10确诊+2可能），其中1例为新增船员确诊病例，无新增死亡（维持3例）。船只仍在鹿特丹港进行清洁消毒。EU/EEA一般人群风险保持非常低。截至5月25日检查，ECDC页面未更新至5月25日。",
       "source": "ECDC",
       "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak"
+    },
+    {
+      "date": "2026-05-24",
+      "title": "NY Post报道：汉坦病毒Sin Nombre毒株在美国西北地区啮齿动物种群中广泛传播，但Sin Nombre毒株不会人际传播，与大西洋号上的安第斯病毒不同",
+      "source": "New York Post",
+      "url": "https://nypost.com/2026/05/24/health/hantavirus-is-gaining-ground-in-the-us-startling-researchers/"
     },
     {
       "date": "2026-05-23",
@@ -224,12 +230,6 @@
       "title": "AP报道：18名美国乘客在内布拉斯加国家隔离单位接受42天医学观察，享受Nebraska式热情接待，等待是否可提前结束隔离",
       "source": "Associated Press",
       "url": "https://www.bozemandailychronicle.com/ap_news/americans-exposed-to-hantavirus-on-ship-enjoy-some-nebraska-hospitality-while-waiting-in-quarantine/article_f15c9b34-4cae-58e4-8d6a-ce0bdcf681b0.html"
-    },
-    {
-      "date": "2026-05-22",
-      "title": "ECDC更新页面至5月22日：仍显示11例（9确诊+2可能），无新增，船只正在鹿特丹港消毒中，对EU/EEA一般人群风险保持非常低",
-      "source": "ECDC",
-      "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak"
     }
   ],
   "risk": {
@@ -262,7 +262,7 @@
     "expected_arrival": "2026年5月18日已抵达鹿特丹",
     "operator": "Oceanwide Expeditions (荷兰)",
     "status": [
-      "5月24日无新增死亡。ECDC 5月24日更新页面：确认12例（10确诊+2可能），其中1例为新增船员确诊，死亡维持3例。WHO暂未发布新的DON。船只在鹿特丹港由EWS Group进行清洁消毒中，计划6月13日复航。"
+      "5月25日检查：ECDC页面仍为5月24日更新，维持12例（10确诊+2可能），无新增死亡。ECDC对EU/EEA一般人群风险评级保持'非常低'。WHO自5月13日后未发布新DON。船只在鹿特丹港由EWS Group进行清洁消毒中，计划6月13日复航。"
     ],
     "disembarkation_plan": "87名乘客和35名船员（来自22个国家）已全部撤离并返回家园。邮轮已于5月18日抵达鹿特丹，20名船员和2名RIVM医护人员已下船进入专门隔离设施，接受医学检测和14天隔离观察。5名船员留船配合EWS Group的清洁消毒程序。完成清洁和检查后，船舶将于6月13日从朗伊尔城恢复运营。",
     "inconclusive": 0,
