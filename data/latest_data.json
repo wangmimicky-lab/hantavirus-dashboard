@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-26T00:20:38.816863",
+  "timestamp": "2026-05-26T10:04:23.508543",
   "global": {
     "confirmed_cases": 12,
     "suspected_cases": 0,
@@ -10,7 +10,7 @@
     "case_fatality_rate": 25,
     "new_cases": 0,
     "new_deaths": 0,
-    "last_updated": "2026-05-26 00:20",
+    "last_updated": "2026-05-26 10:04",
     "data_sources": [
       "WHO",
       "CDC",
@@ -18,7 +18,7 @@
       "RIVM",
       "Oceanwide Expeditions"
     ],
-    "note": "数据统计截至: 2026-05-26 00:20 UTC. ECDC页面最后一次更新为5月25日11:00，数据截至5月24日：12例（10确诊+2可能），3例死亡，无新增。WHO自5月13日发布DON后未发布新DON。ECDC对EU/EEA一般人群风险评级保持'非常低'。船仍在鹿特丹港清洁消毒中，计划6月13日复航。截至本更新时段，未发现新增确诊病例或死亡。Google News显示5月26日有多家媒体报道西班牙公民检测阳性（可能为已知的Case 10西班牙乘客，因西班牙卫生部正式确认而再度受到关注），但ECDC/WHO数据尚未更新，需后续核实。EU/EEA一般人群风险保持非常低。",
+    "note": "数据统计截至: 2026-05-26 10:04 UTC。ECDC页面最后一次更新为5月25日11:00，数据截至5月24日：12例（10确诊+2可能），3例死亡，无新增。WHO自5月13日发布DON601后未发布新的DON。ECDC对EU/EEA一般人群风险评级保持'非常低'。船仍在鹿特丹港由EWS Group进行清洁消毒中，计划6月13日复航。截至本更新时段（5月26日18:00），未发现新增确诊病例或死亡。西班牙卫生部已于5月25日正式确认Case 10（西班牙乘客）检测阳性，该信息已被纳入统计。荷兰RIVM对首批撤离人员的检测结果均为阴性。EU/EEA一般人群风险保持非常低。",
     "virus_strain": "安第斯病毒 (Andes virus, ANDV)",
     "transmission": "人传人（罕见，长期密切接触）",
     "who_risk_level": "全球人口: 低 | 邮轮人员: 中",
@@ -197,6 +197,12 @@
   "news": [
     {
       "date": "2026-05-26",
+      "title": "例行疫情监测更新：截至5月26日18:00 UTC，全球范围内未报告新增确诊病例或死亡。WHO自5月13日（DON601）以来未发布新的疫情通报。ECDC数据维持在5月24日水平：12例（10确诊+2可能），3例死亡。西班牙卫生部5月25日正式确认Case 10检测阳性（此信息已在先前统计中）。荷兰RIVM确认首批撤离人员汉坦病毒检测全部阴性。大西洋号仍在鹿特丹港由EWS Group清洁消毒，计划6月13日复航。EU/EEA一般人群风险保持'非常低'。",
+      "source": "ECDC / WHO / RIVM / 例行监测",
+      "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak"
+    },
+    {
+      "date": "2026-05-26",
       "title": "西班牙卫生部正式确认该国1名从大西洋号撤离的乘客检测出安第斯病毒阳性。该乘客（Case 10）无症状，在马德里住院观察中。多家媒体（Reuters、Euronews、Scripps News等）5月26日报道此消息。",
       "source": "Reuters / Euronews / Scripps News",
       "url": "https://www.reuters.com/world/europe/spanish-national-evacuated-hantavirus-cruise-ship-tests-positive-2026-05-26/"
@@ -224,12 +230,6 @@
       "title": "Washington Post专题报道：南非科学家如何在24小时内从数千公里外识别出大西洋号上的安第斯病毒疫情——南非传染病专家Lucille Blumberg等人接到紧急邮件后快速确认病毒株的幕后故事",
       "source": "The Washington Post",
       "url": "https://www.washingtonpost.com/world/2026/05/23/south-africa-hantavirus-diagnosis-scientists/26e188e8-567e-11f1-9c40-7a0a12d9e745_story.html"
-    },
-    {
-      "date": "2026-05-23",
-      "title": "Washington Post健康专栏：详解为何18名美国乘客需要接受42天（6周）隔离——安第斯病毒最长潜伏期可达6周，远超一般传染病检疫标准",
-      "source": "The Washington Post",
-      "url": "https://www.washingtonpost.com/wellness/2026/05/23/why-quarantine-hantavirus-is-so-long/"
     }
   ],
   "risk": {
@@ -262,7 +262,7 @@
     "expected_arrival": "2026年5月18日已抵达鹿特丹",
     "operator": "Oceanwide Expeditions (荷兰)",
     "status": [
-      "5月26日早间检查：ECDC页面最后一次更新为5月25日11:00，数据仍为截至24日的12例（10确诊+2可能），3例死亡，无新增。WHO自5月13日DON后未发布新通报。Google News显示5月26日有媒体报道西班牙卫生部正式确认该国乘客检测阳性（很可能是先前已知的Case 10）。船仍在鹿特丹港由EWS Group进行清洁消毒中，计划6月13日复航。截至本更新时段，未发现新增确诊病例或死亡。"
+      "5月26日18:00检查：ECDC页面最后一次更新为5月25日11:00，数据仍为截至24日的12例（10确诊+2可能），3例死亡，无新增。WHO自5月13日DON601后未发布新通报。西班牙卫生部5月25日正式确认该国1名乘客检测阳性（Case 10，已在先前统计中）。船仍在鹿特丹港由EWS Group进行清洁消毒中，计划6月13日复航。荷兰RIVM确认首批撤离人员的汉坦病毒检测结果均为阴性。截至本更新时段，未发现新增确诊病例或死亡。"
     ],
     "disembarkation_plan": "87名乘客和35名船员（来自22个国家）已全部撤离并返回家园。邮轮已于5月18日抵达鹿特丹，20名船员和2名RIVM医护人员已下船进入专门隔离设施，接受医学检测和14天隔离观察。5名船员留船配合EWS Group的清洁消毒程序。完成清洁和检查后，船舶将于6月13日从朗伊尔城恢复运营。见5月26日最新报道：西班牙卫生部正式确认该国1名乘客检测阳性。",
     "inconclusive": 0,
