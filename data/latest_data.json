@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-27T10:00:00.000000",
+  "timestamp": "2026-05-28T00:04:00.450343",
   "global": {
     "confirmed_cases": 11,
     "suspected_cases": 0,
@@ -8,9 +8,9 @@
     "deaths": 3,
     "severe_cases": 1,
     "case_fatality_rate": 23.1,
-    "new_cases": 1,
+    "new_cases": 0,
     "new_deaths": 0,
-    "last_updated": "2026-05-27 08:00",
+    "last_updated": "2026-05-28 08:00",
     "data_sources": [
       "WHO",
       "CDC",
@@ -18,7 +18,7 @@
       "RIVM",
       "Oceanwide Expeditions"
     ],
-    "note": "数据统计截至: 2026-05-27 08:00 UTC。5月27日例行检查：ECDC最近一次更新为5月26日15:00（总病例13例：11确诊+2可能，新增1例，无新增死亡，维持3例）。WHO自5月13日发布DON601后未发布新DON。本日无新增通报。船仍在鹿特丹港由EWS Group进行清洁消毒中，计划6月13日复航。荷兰RIVM对首批撤离人员的检测结果均为阴性。EU/EEA一般人群风险保持非常低。",
+    "note": "数据统计截至: 2026-05-28 08:00 UTC。5月28日例行检查：ECDC最近一次更新仍为5月26日15:00（13例：11确诊+2可能，3死亡）。WHO自5月13日发布DON601后未发布新DON。本日无新增通报。船只仍在鹿特丹港由EWS Group清洁消毒中，计划6月13日复航。EU/EEA一般人群风险保持非常低。",
     "virus_strain": "安第斯病毒 (Andes virus, ANDV)",
     "transmission": "人传人（罕见，长期密切接触）",
     "who_risk_level": "全球人口: 低 | 邮轮人员: 中",
@@ -196,6 +196,12 @@
   ],
   "news": [
     {
+      "date": "2026-05-28",
+      "title": "5月28日例行检查：ECDC最近一次更新仍为5月26日15:00（13例：11确诊+2可能，3死亡）。本日及昨日均无新通报。WHO自5月13日发布DON601后未发布新DON，至今已15天无新疫情通报。船只消毒工作持续进行中，按计划将于6月13日从朗伊尔城恢复运营。EU/EEA一般人群风险保持\"非常低\"。",
+      "source": "ECDC / WHO",
+      "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak"
+    },
+    {
       "date": "2026-05-27",
       "title": "5月27日例行检查：ECDC最近更新为5月26日15:00（13例：11确诊+2可能，新增1例，无新增死亡，维持3例）。本日无新通报。WHO自5月13日发布DON601后未发布新DON。EU/EEA一般人群风险保持非常低。船只在鹿特丹港由EWS Group进行清洁消毒中，计划6月13日恢复运营。",
       "source": "ECDC / WHO",
@@ -224,12 +230,6 @@
       "title": "ECDC更新至5月24日：确认总病例增至12例（10确诊+2可能），其中1例为新增船员确诊病例，无新增死亡（维持3例）。船只在鹿特丹港进行清洁消毒。NEJM Evidence与CIDRAP合作发布10例病例详细临床报告，包含首例传播病例细节。",
       "source": "ECDC / NEJM Evidence / CIDRAP",
       "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak"
-    },
-    {
-      "date": "2026-05-24",
-      "title": "NY Post报道：汉坦病毒Sin Nombre毒株在美国西北地区啮齿动物种群中广泛传播，但Sin Nombre毒株不会人际传播，与大西洋号上的安第斯病毒不同",
-      "source": "New York Post",
-      "url": "https://nypost.com/2026/05/24/health/hantavirus-is-gaining-ground-in-the-us-startling-researchers/"
     }
   ],
   "risk": {
@@ -262,7 +262,7 @@
     "expected_arrival": "2026年5月18日已抵达鹿特丹",
     "operator": "Oceanwide Expeditions (荷兰)",
     "status": [
-      "5月27日08:00检查：ECDC于5月26日15:00更新数据（总病例13例：11确诊+2可能，新增1例，无新增死亡，维持3例）。ECDC修订病例定义与WHO一致：确诊病例需PCR和/或血清学实验室确认。5月27日无新通报。船仍在鹿特丹港由EWS Group清洁消毒中，计划6月13日复航。EU/EEA一般人群风险保持非常低。"
+      "5月28日08:00检查：ECDC最近一次更新仍为5月26日15:00（总病例13例：11确诊+2可能，3死亡）。5月27-28日无新通报。船仍在鹿特丹港由EWS Group清洁消毒中，计划6月13日复航。EU/EEA一般人群风险保持非常低。"
     ],
     "disembarkation_plan": "87名乘客和35名船员（来自22个国家）已全部撤离并返回家园。邮轮已于5月18日抵达鹿特丹，20名船员和2名RIVM医护人员已下船进入专门隔离设施，接受医学检测和14天隔离观察。5名船员留船配合EWS Group的清洁消毒程序。完成清洁和检查后，船舶将于6月13日从朗伊尔城恢复运营。",
     "inconclusive": 0,
