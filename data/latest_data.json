@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-28T18:00:00",
+  "timestamp": "2026-05-29T08:00:00",
   "global": {
     "confirmed_cases": 11,
     "suspected_cases": 0,
@@ -10,7 +10,7 @@
     "case_fatality_rate": 23.1,
     "new_cases": 0,
     "new_deaths": 0,
-    "last_updated": "2026-05-28 18:00",
+    "last_updated": "2026-05-29 08:00",
     "data_sources": [
       "WHO",
       "CDC",
@@ -18,7 +18,7 @@
       "RIVM",
       "Oceanwide Expeditions"
     ],
-    "note": "数据统计截至: 2026-05-28 18:00 UTC。5月28日晚间例行检查：ECDC最近一次更新仍为5月26日15:00（13例：11确诊+2可能，3死亡）。WHO自5月13日发布DON601后未发布新DON，至今已15天无新通报。Tavily搜索WHO、ECDC、CDC、维基百科等权威来源，均无新增通报或数据变更。船只仍在鹿特丹港由EWS Group清洁消毒中，计划6月13日从朗伊尔城复航。EU/EEA一般人群风险保持非常低。",
+    "note": "数据统计截至: 2026-05-29 08:00 UTC。5月29日早间例行检查：ECDC最近一次更新仍为5月26日15:00（13例：11确诊+2可能，3死亡）。本日及昨日（5月28日）均无新通报。WHO自5月13日发布DON601后未发布新DON，至今已16天无新通报。Tavily搜索WHO、ECDC、CDC、维基百科等权威来源，均确认无新增数据。CIDRAP虽发布了基于NEJM的详细病例报告，但核心数据无变化。船只仍在鹿特丹港由EWS Group清洁消毒中，计划6月13日从朗伊尔城复航。EU/EEA一般人群风险保持非常低。",
     "virus_strain": "安第斯病毒 (Andes virus, ANDV)",
     "transmission": "人传人（罕见，长期密切接触）",
     "who_risk_level": "全球人口: 低 | 邮轮人员: 中",
@@ -196,6 +196,12 @@
   ],
   "news": [
     {
+      "date": "2026-05-29",
+      "title": "5月29日早间例行检查：ECDC最近一次更新仍为5月26日15:00（13例：11确诊+2可能，3死亡）。本日及昨日（5月28日）均无新通报。WHO自5月13日发布DON601后未发布新DON，至今已16天。Tavily搜索WHO/ECDC/CDC/维基百科/CIDRAP等权威来源均确认无新增数据。CIDRAP于5月发布了基于NEJM（5月13日发表）的10例详细病例报告，但核心统计数据无变化。英国卫生安全局(UKHSA)计划对20名曾在大西洋号上的英国公民开展安第斯病毒研究。船只持续消毒中，6月13日计划复航。",
+      "source": "ECDC / WHO / CIDRAP / Wikipedia",
+      "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak"
+    },
+    {
       "date": "2026-05-28",
       "title": "5月28日晚间例行检查：ECDC最近一次更新仍为5月26日15:00（13例：11确诊+2可能，3死亡）。本日无新通报。WHO自5月13日发布DON601后未发布新DON，至今已15天。Tavily搜索WHO/ECDC/CDC/维基百科等权威来源均确认无新增数据。NEJM于5月13日发表的临床报告（10例）与NEJM病例定义有关（第11例被重新分类为非病例），并非总病例减少。船只持续消毒中，6月13日计划复航。",
       "source": "ECDC / WHO / NEJM / Wikipedia",
@@ -224,12 +230,6 @@
       "title": "西班牙卫生部正式确认该国1名从大西洋号撤离的乘客检测出安第斯病毒阳性。该乘客（Case 10）无症状，在马德里住院观察中。多家媒体（Reuters、Euronews、Scripps News等）5月26日报道此消息。",
       "source": "Reuters / Euronews / Scripps News",
       "url": "https://www.reuters.com/world/europe/spanish-national-evacuated-hantavirus-cruise-ship-tests-positive-2026-05-26/"
-    },
-    {
-      "date": "2026-05-25",
-      "title": "ECDC元数据确认页面于5月25日有更新操作，但内容仍为5月24日状态：12例（10确诊+2可能），3例死亡维持不变。EU/EEA一般人群风险保持非常低。WHO自5月13日后未发布新DON，无新增通报。",
-      "source": "ECDC / WHO",
-      "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak"
     }
   ],
   "risk": {
@@ -262,7 +262,7 @@
     "expected_arrival": "2026年5月18日已抵达鹿特丹",
     "operator": "Oceanwide Expeditions (荷兰)",
     "status": [
-      "5月28日18:00例行检查：ECDC最近一次更新仍为5月26日15:00（总病例13例：11确诊+2可能，3死亡）。5月27-28日无新通报。船仍在鹿特丹港由EWS Group清洁消毒中，计划6月13日复航。EU/EEA一般人群风险保持非常低。"
+      "5月29日08:00例行检查：ECDC最近一次更新仍为5月26日15:00（总病例13例：11确诊+2可能，3死亡）。5月27-29日无新通报。船仍在鹿特丹港由EWS Group清洁消毒中，计划6月13日复航。EU/EEA一般人群风险保持非常低。"
     ],
     "disembarkation_plan": "87名乘客和35名船员（来自22个国家）已全部撤离并返回家园。邮轮已于5月18日抵达鹿特丹，20名船员和2名RIVM医护人员已下船进入专门隔离设施，接受医学检测和14天隔离观察。5名船员留船配合EWS Group的清洁消毒程序。完成清洁和检查后，船舶将于6月13日从朗伊尔城恢复运营。",
     "inconclusive": 0,
