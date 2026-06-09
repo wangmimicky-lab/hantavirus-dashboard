@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-08T18:00:00",
+  "timestamp": "2026-06-09T08:00:00",
   "global": {
     "confirmed_cases": 11,
     "suspected_cases": 0,
@@ -10,7 +10,7 @@
     "case_fatality_rate": 23.1,
     "new_cases": 0,
     "new_deaths": 0,
-    "last_updated": "2026-06-08 18:00",
+    "last_updated": "2026-06-09 08:00",
     "data_sources": [
       "WHO DON604 (28 May 2026)",
       "ECDC (26 May 2026 15:00)",
@@ -39,9 +39,15 @@
       "EU Commission HERA (28 May 2026)",
       "WHO Emergency Event 2026-E000227 (7 June 2026 18:00)",
       "WHO Emergency Event 2026-E000227 (8 June 2026 08:00)",
-      "WHO Emergency Event 2026-E000227 (8 June 2026 18:00)"
+      "WHO Emergency Event 2026-E000227 (8 June 2026 18:00)",
+      "WHO Emergency Event 2026-E000227 (9 June 2026 08:00)",
+      "Tristan da Cunha Hantavirus Isolation Update (3 June 2026)",
+      "Tristan da Cunha 'Tristanians arrive in Weymouth' (7 June 2026)",
+      "NETEC Timeline Update (2 June 2026)",
+      "RIVM Current Information (3 June 2026)",
+      "澳廣視/TDM 阿根廷扩展调查 (6 June 2026)"
     ],
-    "note": "6月8日晚间常规监测更新：大西洋号(MV Hondius)已于6月6日从鹿特丹启程前往斯瓦尔巴群岛朗伊尔城，目前正在航行途中。对WHO紧急事件页面（2026-E000227，DON604仍为最新通报，已连续12天无新DON）、ECDC（最后更新5月26日，已13天未更新）、CDC以及多源新闻进行8组Tavily关键词全面搜索（含中英文），未发现邮轮疫情新增病例或死亡报告。WHO DON604核心数据维持不变：13例（11确诊+2可能），3死亡，CFR 23.1%，Rt=0.7。超过600名接触者分布32国继续监测。大西洋号预计6月13日抵达朗伊尔城恢复北极航线运营。Oceanwide Expeditions官网显示后续多个航次（HDS04-26至HDS08-26）均已正常售票运营。5名美国乘客居家监测至6月21日；13人继续在内布拉斯加隔离设施留观。",
+    "note": "6月9日晨间常规监测更新：大西洋号(MV Hondius)已于6月6日从鹿特丹启程前往斯瓦尔巴群岛朗伊尔城，目前正在航行途中。对WHO紧急事件页面（2026-E000227）和DON604页面进行访问验证——DON604（5月28日发布，数据截至5月27日）仍为最新通报，已连续13天无新DON发布。对ECDC、CDC、RIVM、NETEC及多源新闻进行5组Tavily关键词全面搜索（含中英文），未发现邮轮疫情新增病例或死亡报告。WHO DON604核心数据维持不变：13例（11确诊+2可能），3死亡，CFR 23.1%，Rt=0.7。超过600名接触者分布32国继续监测。大西洋号预计6月13日抵达朗伊尔城恢复北极航线运营。Tristan da Cunha岛4名隔离岛民已于6月7日完成在英国的隔离期并抵达Weymouth。NETEC时间线确认6月2日5名美国乘客从内布拉斯加隔离设施返回家中继续监测21天。RIVM 6月3日更新涉及额外检测。阿根廷卫生部于6月6日将汉坦病毒流行病学调查扩展至门多萨省（与邮轮疫情无关，属阿根廷本土监测）。",
     "virus_strain": "安第斯病毒 (Andes virus, ANDV)",
     "transmission": "人传人（罕见，长期密切接触）",
     "who_risk_level": "全球人口: 低 | 邮轮人员: 中",
@@ -219,6 +225,24 @@
   ],
   "news": [
     {
+      "date": "2026-06-09",
+      "title": "6月9日晨间常规监测更新：对WHO紧急事件页面（2026-E000227，DON604仍为最新通报，已连续13天无新DON发布）、ECDC（最后更新5月26日，已14天未更新）、CDC、RIVM、NETEC及多源新闻进行5组Tavily关键词全面搜索（中英文），未发现邮轮疫情新增病例或死亡报告。WHO DON604（5月28日发布，数据截至5月27日）核心数据维持不变：总病例13例（11确诊+2可能），死亡3例，CFR 23.1%，Rt=0.7。超过600名接触者分布32国继续监测。大西洋号(MV Hondius)已于6月6日从鹿特丹启程，目前正在前往斯瓦尔巴群岛朗伊尔城途中，预计6月13日恢复北极航线运营（HDS04-26「北斯匹次卑尔根探险」，6月13-20日）。Tristan da Cunha岛4名隔离岛民已于6月7日完成英国隔离并抵达Weymouth。NETEC确认6月2日5名美国乘客从内布拉斯加隔离设施返回家中，由地方卫生部门继续监测21天（至6月23日）。阿根廷卫生部6月6日将汉坦病毒流行病学调查扩展至门多萨省（属阿根廷本土监测，非邮轮疫情相关）。",
+      "source": "WHO DON604 / ECDC / CDC / NETEC / RIVM / Tristan da Cunha / 澳廣視 / Tavily综合搜索",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604"
+    },
+    {
+      "date": "2026-06-07",
+      "title": "Tristan da Cunha岛汉坦病毒隔离更新：4名曾在4月中旬搭乘大西洋号(MV Hondius)返回Tristan岛的岛民，经英国政府协调在Weymouth完成全部隔离期（检测均为阴性），已于6月7日正式解除隔离。6月3日发布的隔离公告详细说明了各暴露人员的隔离期限。英国空军第16空中突击旅5月9日的空降行动（投送6名伞兵+2名医务人员及3,300kg医疗物资至该岛）成功遏制了潜在社区传播，岛上居民无人感染。",
+      "source": "Tristan da Cunha Government / UK Health Security Agency",
+      "url": "https://www.tristandc.com/hantavirus-2026.php"
+    },
+    {
+      "date": "2026-06-02",
+      "title": "NETEC时间线更新：在内布拉斯加大学医学中心（UNMC）国家隔离单元完成为期三周隔离观察后，5名MV Hondius邮轮前乘客已于6月2日返回各自所在州（纽约2人、加州2人、未公开1人），由地方和州公共卫生部门继续监测21天至6月23日。13名乘客继续留在UNMC隔离设施完成42天全程隔离。CDC持续协调州和地方卫生当局保护社区健康安全。",
+      "source": "NETEC Resource Library / CDC",
+      "url": "https://repository.netecweb.org/exhibits/show/hantavirus/hantavirus"
+    },
+    {
       "date": "2026-06-08",
       "title": "6月8日晚间常规监测更新：对WHO紧急事件页面（2026-E000227，DON604仍为最新通报，已连续12天无新DON发布）、ECDC（最后更新5月26日，已13天未更新）、CDC及多源新闻进行8组Tavily关键词全面搜索（中英文），未发现邮轮疫情新增病例或死亡报告。WHO DON604（5月28日发布，数据截至5月27日）核心数据维持不变：总病例13例（11确诊+2可能），死亡3例，CFR 23.1%，Rt=0.7。超过600名接触者分布32国继续监测。大西洋号(MV Hondius)已于6月6日从鹿特丹启程，目前正在前往斯瓦尔巴群岛朗伊尔城途中，预计6月13日恢复北极航线运营（HDS04-26「北斯匹次卑尔根探险」，6月13-20日）。Oceanwide Expeditions官网显示后续航次（HDS05-26至HDS08-26）均已正常售票运营，部分舱型显示Waitlist或已售罄。5名美国乘客居家监测至6月21日；13人继续在内布拉斯加隔离设施留观。",
       "source": "WHO DON604 / ECDC / CDC / Oceanwide Expeditions / Tavily综合搜索",
@@ -235,24 +259,6 @@
       "title": "6月7日晚间常规监测更新：对WHO紧急事件页面（2026-E000227，DON604仍为最新通报，已连续11天无新DON）、ECDC（最后更新5月26日，已12天未更新）、CDC及多源新闻进行7组Tavily关键词全面搜索，未发现邮轮疫情新增病例或死亡报告。WHO DON604（5月28日发布，数据截至5月27日）确认总病例13例（11确诊+2可能），死亡3例，CFR 23.1%。CIDRAP/NEJM联合报告详细分析了11例病例中10例的流行病学特征。大西洋号已于6月6日从鹿特丹启程前往朗伊尔城，预计6月13日恢复北极航线运营。5名美国乘客居家监测至6月21日；13人继续在内布拉斯加隔离设施留观。超过600名接触者分布32国继续监测。",
       "source": "WHO DON604 / ECDC / CDC / CIDRAP / Reuters / Tavily搜索",
       "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604"
-    },
-    {
-      "date": "2026-06-07",
-      "title": "6月7日上午常规监测更新：大西洋号(MV Hondius)已于昨日（6月6日）顺利从鹿特丹启程，目前正在前往斯瓦尔巴群岛朗伊尔城的航行途中。对WHO（DON604仍为最新通报，已连续11天无新DON）、ECDC（最后更新5月26日，已12天未更新）、CDC及多源新闻进行Tavily关键词全面搜索，未发现邮轮疫情新增病例或死亡报告。WHO DON604核心数据维持不变：13例（11确诊+2可能），3死亡，CFR 23.1%。超过600名接触者分布32国继续监测。大西洋号预计6月13日从朗伊尔城恢复北极航线运营（HDS04-26「北斯匹次卑尔根探险」，6月13-20日）。5名美国乘客居家监测至6月21日，13人继续在内布拉斯加留观。",
-      "source": "WHO DON604 / ECDC / CDC / Oceanwide Expeditions / Tavily搜索",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604"
-    },
-    {
-      "date": "2026-06-06",
-      "title": "6月6日下午综合监测更新：对WHO（DON604仍为最新通报，已连续10天无新DON）、ECDC（最后更新5月26日，已11天未更新）、CDC、Oceanwide Expeditions及多源新闻进行全面搜索。未发现邮轮疫情新增病例或死亡报告。大西洋号今日（6月6日）从鹿特丹起航前往朗伊尔城，标志着邮轮正式结束疫情相关停航状态。欧盟HERA机制确认已于5月28日从日本富士胶片协调调运Favipiravir实验性抗病毒药物至法国、西班牙和荷兰，供临床试验或同情用药。",
-      "source": "WHO DON604 / ECDC / Oceanwide Expeditions / EU HERA / Tavily搜索",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604"
-    },
-    {
-      "date": "2026-06-06",
-      "title": "【里程碑日】大西洋号(MV Hondius)今日从鹿特丹启程前往斯瓦尔巴群岛朗伊尔城，为6月13日北极航线首航做准备。Oceanwide Expeditions 6月1日新闻稿确认：全船深度清洁消毒已于5月29日完成，5月30日获荷兰卫生当局(GGD)正式批准复航。原船员全部下船隔离，新船员完成交接——确保船上人员与被隔离人员零接触。首航航次HDS04-26「北斯匹次卑尔根探险」（6月13-20日），起价€4,150/人。WHO DON604（5月28日发布）仍为最新通报，核心数据不变：13例（11确诊+2可能），3死亡，CFR 23.1%。超600名接触者分布32国继续监测，5名美国乘客居家监测至6月21日。",
-      "source": "Oceanwide Expeditions Press / WHO DON604 / Wikipedia",
-      "url": "https://oceanwide-expeditions.com/press/press-update-1-june-2026-13-00-hrs-cet"
     }
   ],
   "risk": {
@@ -289,7 +295,7 @@
     "expected_arrival": "2026年5月18日已抵达鹿特丹",
     "operator": "Oceanwide Expeditions (荷兰)",
     "status": [
-      "6月8日晚间更新：大西洋号(MV Hondius)已于6月6日从鹿特丹启程，目前正在大西洋/北海航行前往斯瓦尔巴群岛朗伊尔城。WHO自5月28日DON604以来无新通报，已连续12天无新DON。核心数据不变：13例=11确诊+2可能，3死亡，Rt=0.7。全船深度清洁消毒已完成（5月29日），获荷兰GGD批准复航（5月30日）。原船员全部下船隔离，新船员完成交接。预计6月13日从朗伊尔城恢复北极航线首航「北斯匹次卑尔根探险」(HDS04-26, 6月13-20日)。后续航次（HDS05-26至HDS08-26）已正常售票，部分舱型显示Waitlist或已售罄。5名美国乘客居家监测至6月21日；13人继续留观。超600名接触者分布32国继续监测。"
+      "6月9日晨间更新：大西洋号(MV Hondius)已于6月6日从鹿特丹启程，目前正在大西洋/北海航行前往斯瓦尔巴群岛朗伊尔城。WHO自5月28日DON604以来无新通报，已连续13天无新DON。核心数据不变：13例=11确诊+2可能，3死亡，Rt=0.7。全船深度清洁消毒已完成（5月29日），获荷兰GGD批准复航（5月30日）。原船员全部下船隔离，新船员完成交接。预计6月13日从朗伊尔城恢复北极航线首航「北斯匹次卑尔根探险」(HDS04-26, 6月13-20日)。后续航次（HDS05-26至HDS08-26）已正常售票，部分舱型显示Waitlist或已售罄。5名美国乘客居家监测至6月21日；13人继续留观。超600名接触者分布32国继续监测。Tristan da Cunha岛4名隔离岛民已于6月7日完成英国隔离，检测均为阴性。"
     ],
     "disembarkation_plan": "87名乘客和35名船员（来自22个国家）已全部撤离并返回家园。邮轮已于5月18日抵达鹿特丹，原船员全部下船进入专门隔离设施（20名非荷兰籍船员6周隔离至约6月29日）。EWS Group已完成全船深度清洁和消毒程序（5月29日），荷兰GGD于5月30日正式批准船舶复航。新船员已交接上船。大西洋号于6月6日从鹿特丹启程前往朗伊尔城（斯瓦尔巴群岛），目前正在海上航行，预计6月13日恢复北极航线首航。隔离进展：5名美国乘客居家监测至6月21日；13人继续在内布拉斯加留观。澳大利亚6名乘客隔离至6月23日。",
     "inconclusive": 0,
