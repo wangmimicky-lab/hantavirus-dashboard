@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-13T08:10:45",
+  "timestamp": "2026-06-13T18:02:28",
   "global": {
     "confirmed_cases": 11,
     "suspected_cases": 0,
@@ -10,7 +10,7 @@
     "case_fatality_rate": 23.1,
     "new_cases": 0,
     "new_deaths": 0,
-    "last_updated": "2026-06-13 08:10",
+    "last_updated": "2026-06-13 18:02",
     "data_sources": [
       "Tavily AI搜索确认大西洋号6月13日抵达朗伊尔城",
       "Oceanwide Expeditions Facebook/Instagram（6月13日确认抵达）",
